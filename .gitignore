@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+db.sqlite3
+*.log
+media/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+dist/
+build/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.pem
+*.key
