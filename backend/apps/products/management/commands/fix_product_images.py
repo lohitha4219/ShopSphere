@@ -7,26 +7,12 @@ from django.core.management.base import BaseCommand
 from apps.products.models import Product
 
 
-# ---------------------------------------------------------
-# Verified external product-image URLs
-# ---------------------------------------------------------
-# These are used only when the current product image URL
-# is broken/unreachable.
-#
-# The URLs point directly to images.unsplash.com.
-# ---------------------------------------------------------
-
+# Valid fallback image URLs
 IMAGE_POOL = [
     {
         "keywords": [
-            "laptop",
-            "computer",
-            "electronics",
-            "phone",
-            "mobile",
-            "tablet",
-            "keyboard",
-            "monitor",
+            "laptop", "computer", "electronics", "phone",
+            "mobile", "tablet", "keyboard", "monitor"
         ],
         "url": (
             "https://images.unsplash.com/"
@@ -36,18 +22,9 @@ IMAGE_POOL = [
     },
     {
         "keywords": [
-            "shirt",
-            "tshirt",
-            "t-shirt",
-            "men",
-            "women",
-            "fashion",
-            "dress",
-            "clothing",
-            "wear",
-            "jeans",
-            "hoodie",
-            "top",
+            "shirt", "tshirt", "t-shirt", "men", "women",
+            "fashion", "dress", "clothing", "wear",
+            "jeans", "hoodie", "top"
         ],
         "url": (
             "https://images.unsplash.com/"
@@ -57,13 +34,8 @@ IMAGE_POOL = [
     },
     {
         "keywords": [
-            "shoe",
-            "shoes",
-            "footwear",
-            "sneaker",
-            "sneakers",
-            "running",
-            "sports",
+            "shoe", "shoes", "footwear",
+            "sneaker", "sneakers", "running", "sports"
         ],
         "url": (
             "https://images.unsplash.com/"
@@ -73,10 +45,8 @@ IMAGE_POOL = [
     },
     {
         "keywords": [
-            "watch",
-            "wristwatch",
-            "accessory",
-            "accessories",
+            "watch", "wristwatch",
+            "accessory", "accessories"
         ],
         "url": (
             "https://images.unsplash.com/"
@@ -86,14 +56,9 @@ IMAGE_POOL = [
     },
     {
         "keywords": [
-            "beauty",
-            "makeup",
-            "cosmetic",
-            "cosmetics",
-            "lipstick",
-            "skincare",
-            "skin",
-            "personal care",
+            "beauty", "makeup", "cosmetic",
+            "cosmetics", "lipstick", "skincare",
+            "skin", "personal care"
         ],
         "url": (
             "https://images.unsplash.com/"
@@ -103,13 +68,8 @@ IMAGE_POOL = [
     },
     {
         "keywords": [
-            "yoga",
-            "fitness",
-            "gym",
-            "mat",
-            "sports",
-            "exercise",
-            "workout",
+            "yoga", "fitness", "gym", "mat",
+            "exercise", "workout"
         ],
         "url": (
             "https://images.unsplash.com/"
@@ -119,27 +79,18 @@ IMAGE_POOL = [
     },
     {
         "keywords": [
-            "home",
-            "living",
-            "furniture",
-            "sofa",
-            "chair",
-            "decor",
-            "decoration",
-            "interior",
+            "home", "living", "furniture",
+            "sofa", "chair", "decor",
+            "decoration", "interior"
         ],
         "url": (
             "https://images.unsplash.com/"
-            "photo-1718972771654-47be8f36e0fd"
+            "photo-1618221195710-dd6b41faaea6"
             "?auto=format&fit=crop&w=800&q=80"
         ),
     },
 ]
 
-
-# ---------------------------------------------------------
-# Default fallback
-# ---------------------------------------------------------
 
 DEFAULT_IMAGE = (
     "https://images.unsplash.com/"
@@ -151,15 +102,13 @@ DEFAULT_IMAGE = (
 class Command(BaseCommand):
 
     help = (
-        "Checks all product image URLs and automatically "
-        "replaces broken product images with valid URLs."
+        "Checks product thumbnail URLs and replaces "
+        "broken images with valid URLs."
     )
 
-    # -----------------------------------------------------
-    # Check whether an image URL is reachable
-    # -----------------------------------------------------
-
     def is_url_valid(self, url):
+        """Check whether an external image URL works."""
+
         if not url:
             return False
 
@@ -171,6 +120,7 @@ class Command(BaseCommand):
         ):
             return False
 
+        # First try HEAD
         try:
             request = Request(
                 url,
@@ -180,53 +130,46 @@ class Command(BaseCommand):
                 },
             )
 
-            with urlopen(request, timeout=10) as response:
-                status = response.status
-
-                if 200 <= status < 400:
+            with urlopen(request, timeout=8) as response:
+                if 200 <= response.status < 400:
                     return True
 
         except HTTPError as error:
 
-            # Some CDNs do not allow HEAD.
-            # Try a small GET request instead.
+            # Some image servers reject HEAD.
             if error.code in [403, 405, 429]:
-                try:
-                    request = Request(
-                        url,
-                        method="GET",
-                        headers={
-                            "User-Agent": "ShopSphere-ImageChecker/1.0",
-                            "Range": "bytes=0-1024",
-                        },
-                    )
+                pass
+            else:
+                return False
 
-                    with urlopen(request, timeout=10) as response:
-                        return 200 <= response.status < 400
-
-                except Exception:
-                    return False
-
+        except (URLError, TimeoutError, OSError):
             return False
 
-        except (URLError, TimeoutError, Exception):
+        # Fallback: small GET request
+        try:
+            request = Request(
+                url,
+                method="GET",
+                headers={
+                    "User-Agent": "ShopSphere-ImageChecker/1.0",
+                    "Range": "bytes=0-1024",
+                },
+            )
+
+            with urlopen(request, timeout=8) as response:
+                return 200 <= response.status < 400
+
+        except Exception:
             return False
-
-        return False
-
-    # -----------------------------------------------------
-    # Find the best replacement based on product information
-    # -----------------------------------------------------
 
     def get_replacement_image(self, product):
+        """Choose a replacement based on product/category text."""
 
         text_parts = [
             str(getattr(product, "name", "") or ""),
             str(getattr(product, "brand", "") or ""),
-            str(getattr(product, "category_name", "") or ""),
         ]
 
-        # Category object support
         category = getattr(product, "category", None)
 
         if category:
@@ -236,7 +179,6 @@ class Command(BaseCommand):
 
         text = " ".join(text_parts).lower()
 
-        # Try category/product-specific match
         for item in IMAGE_POOL:
 
             for keyword in item["keywords"]:
@@ -244,42 +186,34 @@ class Command(BaseCommand):
                 if keyword.lower() in text:
                     return item["url"]
 
-        # Otherwise use general fashion/product image
         return DEFAULT_IMAGE
 
-    # -----------------------------------------------------
-    # Check one product
-    # -----------------------------------------------------
-
     def inspect_product(self, product):
+        """
+        Inspect the actual Product model field.
 
-        thumbnail = getattr(product, "thumbnail", None)
-        primary_image = getattr(product, "primary_image", None)
+        Your Product model does NOT contain primary_image.
+        The actual database field is thumbnail.
+        """
 
-        thumbnail = str(thumbnail or "").strip()
-        primary_image = str(primary_image or "").strip()
+        thumbnail = str(
+            getattr(product, "thumbnail", "") or ""
+        ).strip()
 
         thumbnail_valid = self.is_url_valid(thumbnail)
-        primary_valid = self.is_url_valid(primary_image)
 
         return {
             "product": product,
             "thumbnail": thumbnail,
-            "primary_image": primary_image,
             "thumbnail_valid": thumbnail_valid,
-            "primary_valid": primary_valid,
         }
-
-    # -----------------------------------------------------
-    # Main command
-    # -----------------------------------------------------
 
     def handle(self, *args, **options):
 
         self.stdout.write("")
         self.stdout.write(
             self.style.SUCCESS(
-                "=============================================="
+                "=========================================="
             )
         )
         self.stdout.write(
@@ -289,7 +223,7 @@ class Command(BaseCommand):
         )
         self.stdout.write(
             self.style.SUCCESS(
-                "=============================================="
+                "=========================================="
             )
         )
         self.stdout.write("")
@@ -313,16 +247,11 @@ class Command(BaseCommand):
             return
 
         self.stdout.write(
-            "Checking product image URLs..."
+            "Checking product thumbnail URLs..."
         )
         self.stdout.write("")
 
         results = []
-
-        # -------------------------------------------------
-        # Check URLs concurrently so 75 products don't
-        # take several minutes.
-        # -------------------------------------------------
 
         with ThreadPoolExecutor(max_workers=10) as executor:
 
@@ -337,18 +266,18 @@ class Command(BaseCommand):
             for future in as_completed(futures):
 
                 try:
-                    result = future.result()
-                    results.append(result)
+                    results.append(
+                        future.result()
+                    )
 
                 except Exception as error:
 
                     self.stdout.write(
                         self.style.ERROR(
-                            f"Image check error: {error}"
+                            f"Check error: {error}"
                         )
                     )
 
-        # Keep output ordered by product ID
         results.sort(
             key=lambda item: item["product"].id,
             reverse=True,
@@ -357,26 +286,18 @@ class Command(BaseCommand):
         fixed_count = 0
         valid_count = 0
 
-        # -------------------------------------------------
-        # Repair broken images
-        # -------------------------------------------------
-
         for result in results:
 
             product = result["product"]
 
             thumbnail = result["thumbnail"]
-            primary_image = result["primary_image"]
-
             thumbnail_valid = result["thumbnail_valid"]
-            primary_valid = result["primary_valid"]
 
-            # ---------------------------------------------
-            # Case 1:
-            # Both images are valid
-            # ---------------------------------------------
+            # ------------------------------------------
+            # Image already works
+            # ------------------------------------------
 
-            if thumbnail_valid and primary_valid:
+            if thumbnail_valid:
 
                 valid_count += 1
 
@@ -389,76 +310,25 @@ class Command(BaseCommand):
 
                 continue
 
-            # ---------------------------------------------
-            # Case 2:
-            # Thumbnail is broken but primary_image works
-            # ---------------------------------------------
-
-            if not thumbnail_valid and primary_valid:
-
-                product.thumbnail = primary_image
-                product.save(
-                    update_fields=["thumbnail"]
-                )
-
-                fixed_count += 1
-
-                self.stdout.write(
-                    self.style.WARNING(
-                        f"[FIXED] #{product.id} - "
-                        f"thumbnail -> primary_image"
-                    )
-                )
-
-                continue
-
-            # ---------------------------------------------
-            # Case 3:
-            # Thumbnail works but primary_image broken
-            # ---------------------------------------------
-
-            if thumbnail_valid and not primary_valid:
-
-                product.primary_image = thumbnail
-                product.save(
-                    update_fields=["primary_image"]
-                )
-
-                fixed_count += 1
-
-                self.stdout.write(
-                    self.style.WARNING(
-                        f"[FIXED] #{product.id} - "
-                        f"primary_image -> thumbnail"
-                    )
-                )
-
-                continue
-
-            # ---------------------------------------------
-            # Case 4:
-            # Both images are broken/missing
-            # ---------------------------------------------
+            # ------------------------------------------
+            # Image is broken
+            # ------------------------------------------
 
             replacement = self.get_replacement_image(
                 product
             )
 
             product.thumbnail = replacement
-            product.primary_image = replacement
 
             product.save(
-                update_fields=[
-                    "thumbnail",
-                    "primary_image",
-                ]
+                update_fields=["thumbnail"]
             )
 
             fixed_count += 1
 
             self.stdout.write(
                 self.style.WARNING(
-                    f"[REPLACED] #{product.id} - "
+                    f"[FIXED] #{product.id} - "
                     f"{product.name}"
                 )
             )
@@ -467,26 +337,21 @@ class Command(BaseCommand):
                 f"    New image: {replacement}"
             )
 
-        # -------------------------------------------------
-        # Final summary
-        # -------------------------------------------------
-
         self.stdout.write("")
+
         self.stdout.write(
             self.style.SUCCESS(
-                "=============================================="
+                "=========================================="
             )
         )
-
         self.stdout.write(
             self.style.SUCCESS(
                 " Image Repair Completed"
             )
         )
-
         self.stdout.write(
             self.style.SUCCESS(
-                "=============================================="
+                "=========================================="
             )
         )
 
@@ -499,33 +364,20 @@ class Command(BaseCommand):
         )
 
         self.stdout.write(
-            f"Fixed/replaced : {fixed_count}"
+            f"Fixed           : {fixed_count}"
         )
 
         self.stdout.write("")
 
-        remaining = 0
+        remaining = Product.objects.filter(
+            thumbnail__isnull=True
+        ).count()
 
-        # -------------------------------------------------
-        # Final verification
-        # -------------------------------------------------
+        empty_count = Product.objects.filter(
+            thumbnail=""
+        ).count()
 
-        self.stdout.write(
-            "Running final verification..."
-        )
-
-        for product in Product.objects.all():
-
-            thumbnail = str(
-                getattr(product, "thumbnail", "") or ""
-            ).strip()
-
-            primary_image = str(
-                getattr(product, "primary_image", "") or ""
-            ).strip()
-
-            if not thumbnail or not primary_image:
-                remaining += 1
+        remaining += empty_count
 
         if remaining == 0:
 
@@ -540,7 +392,7 @@ class Command(BaseCommand):
             self.stdout.write(
                 self.style.WARNING(
                     f"{remaining} products still have "
-                    "missing image fields."
+                    "missing thumbnail values."
                 )
             )
 
