@@ -37,29 +37,69 @@ export const HomePage = () => {
   }, []);
 
   const loadHomeData = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      const [cats, feat, deals, best, prodsRes] = await Promise.all([
-        categoryService.getCategories(),
-        productService.getFeatured(),
-        productService.getDeals(),
-        productService.getBestSellers(),
-        productService.getProducts({ page_size: 40 }),
-      ]);
-      const parseList = (res) => (Array.isArray(res) ? res : (res?.results || []));
-      setCategories(parseList(cats));
-      setFeaturedProducts(parseList(feat));
-      setDealProducts(parseList(deals));
-      setBestSellers(parseList(best));
-      setAllProducts(parseList(prodsRes));
-    } catch (err) {
-      console.error('Error loading home data from Django API:', err);
-      setError(err?.response?.data?.detail || err?.message || 'Failed to load store products. Please check server.');
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    setLoading(true);
+    setError(null);
+
+    // Only 2 API calls:
+    // 1. Categories
+    // 2. Products
+    const [cats, prodsRes] = await Promise.all([
+      categoryService.getCategories(),
+      productService.getProducts({ page_size: 40 }),
+    ]);
+
+    const parseList = (res) =>
+      Array.isArray(res) ? res : (res?.results || []);
+
+    const categoriesList = parseList(cats);
+    const products = parseList(prodsRes);
+
+    setCategories(categoriesList);
+    setAllProducts(products);
+
+    // -----------------------------------------
+    // Derive homepage sections from same products
+    // -----------------------------------------
+
+    // Featured Products
+    const featured = products
+      .filter((p) => p.is_featured === true)
+      .slice(0, 8);
+
+    setFeaturedProducts(featured);
+
+    // Deals of the Day
+    const deals = products
+      .filter((p) => Number(p.discount_percentage || 0) > 0)
+      .sort(
+        (a, b) =>
+          Number(b.discount_percentage || 0) -
+          Number(a.discount_percentage || 0)
+      )
+      .slice(0, 8);
+
+    setDealProducts(deals);
+
+    // Best Sellers
+    const sellers = products
+      .filter((p) => p.is_best_seller === true)
+      .slice(0, 8);
+
+    setBestSellers(sellers);
+
+  } catch (err) {
+    console.error('Error loading home data from Django API:', err);
+
+    setError(
+      err?.response?.data?.detail ||
+      err?.message ||
+      'Failed to load store products. Please check server.'
+    );
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     loadHomeData();
