@@ -1,0 +1,5543 @@
+[
+{
+  "model": "categories.category",
+  "pk": 1,
+  "fields": {
+    "name": "Fashion",
+    "slug": "fashion",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 1,
+    "created_at": "2026-09-29T05:09:33.928Z",
+    "updated_at": "2026-10-05T06:53:07.013Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 2,
+  "fields": {
+    "name": "Men's Fashion",
+    "slug": "mens-fashion",
+    "description": "",
+    "image": "",
+    "parent": 1,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:33.937Z",
+    "updated_at": "2026-09-29T05:09:33.937Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 3,
+  "fields": {
+    "name": "Women's Fashion",
+    "slug": "womens-fashion",
+    "description": "",
+    "image": "",
+    "parent": 1,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:33.946Z",
+    "updated_at": "2026-09-29T05:09:33.947Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 4,
+  "fields": {
+    "name": "Kids Fashion",
+    "slug": "kids-fashion",
+    "description": "",
+    "image": "",
+    "parent": 1,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:33.954Z",
+    "updated_at": "2026-09-29T05:09:33.954Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 5,
+  "fields": {
+    "name": "Electronics",
+    "slug": "electronics",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 2,
+    "created_at": "2026-09-29T05:09:33.964Z",
+    "updated_at": "2026-10-05T06:53:07.014Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 6,
+  "fields": {
+    "name": "Mobiles",
+    "slug": "mobiles",
+    "description": "",
+    "image": "",
+    "parent": 5,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:33.972Z",
+    "updated_at": "2026-09-29T05:09:33.972Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 7,
+  "fields": {
+    "name": "Laptops",
+    "slug": "laptops",
+    "description": "",
+    "image": "",
+    "parent": 5,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:33.982Z",
+    "updated_at": "2026-09-29T05:09:33.982Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 8,
+  "fields": {
+    "name": "Audio & Accessories",
+    "slug": "audio-accessories",
+    "description": "",
+    "image": "",
+    "parent": 5,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:33.989Z",
+    "updated_at": "2026-09-29T05:09:33.989Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 9,
+  "fields": {
+    "name": "Home & Kitchen",
+    "slug": "home-kitchen",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1517668808822-9ebd02f2a888?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 3,
+    "created_at": "2026-09-29T05:09:33.997Z",
+    "updated_at": "2026-10-05T06:53:07.015Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 10,
+  "fields": {
+    "name": "Cookware",
+    "slug": "cookware",
+    "description": "",
+    "image": "",
+    "parent": 9,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.004Z",
+    "updated_at": "2026-09-29T05:09:34.004Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 11,
+  "fields": {
+    "name": "Home Decor",
+    "slug": "home-decor",
+    "description": "",
+    "image": "",
+    "parent": 9,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.012Z",
+    "updated_at": "2026-09-29T05:09:34.012Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 12,
+  "fields": {
+    "name": "Furniture",
+    "slug": "furniture",
+    "description": "",
+    "image": "categories/furniture.jpg",
+    "parent": 9,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.018Z",
+    "updated_at": "2026-09-30T04:34:50.223Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 13,
+  "fields": {
+    "name": "Beauty",
+    "slug": "beauty",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 4,
+    "created_at": "2026-09-29T05:09:34.023Z",
+    "updated_at": "2026-10-05T06:53:07.016Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 14,
+  "fields": {
+    "name": "Skincare",
+    "slug": "skincare",
+    "description": "",
+    "image": "",
+    "parent": 13,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.031Z",
+    "updated_at": "2026-09-29T05:09:34.031Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 15,
+  "fields": {
+    "name": "Fragrances",
+    "slug": "fragrances",
+    "description": "",
+    "image": "",
+    "parent": 13,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.037Z",
+    "updated_at": "2026-09-29T05:09:34.037Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 16,
+  "fields": {
+    "name": "Haircare",
+    "slug": "haircare",
+    "description": "",
+    "image": "",
+    "parent": 13,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.045Z",
+    "updated_at": "2026-09-29T05:09:34.045Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 17,
+  "fields": {
+    "name": "Footwear",
+    "slug": "footwear",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 5,
+    "created_at": "2026-09-29T05:09:34.051Z",
+    "updated_at": "2026-10-05T06:53:07.015Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 18,
+  "fields": {
+    "name": "Sneakers",
+    "slug": "sneakers",
+    "description": "",
+    "image": "",
+    "parent": 17,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.056Z",
+    "updated_at": "2026-09-29T05:09:34.056Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 19,
+  "fields": {
+    "name": "Formal Shoes",
+    "slug": "formal-shoes",
+    "description": "",
+    "image": "",
+    "parent": 17,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.066Z",
+    "updated_at": "2026-09-29T05:09:34.066Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 20,
+  "fields": {
+    "name": "Casual Sandals",
+    "slug": "casual-sandals",
+    "description": "",
+    "image": "",
+    "parent": 17,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.072Z",
+    "updated_at": "2026-09-29T05:09:34.072Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 21,
+  "fields": {
+    "name": "Grocery",
+    "slug": "grocery",
+    "description": "",
+    "image": "categories/grocery.jpg",
+    "parent": null,
+    "is_active": true,
+    "order": 6,
+    "created_at": "2026-09-29T05:09:34.082Z",
+    "updated_at": "2026-09-30T04:34:50.192Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 22,
+  "fields": {
+    "name": "Snacks & Munchies",
+    "slug": "snacks-munchies",
+    "description": "",
+    "image": "",
+    "parent": 21,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.088Z",
+    "updated_at": "2026-09-29T05:09:34.088Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 23,
+  "fields": {
+    "name": "Beverages",
+    "slug": "beverages",
+    "description": "",
+    "image": "",
+    "parent": 21,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.096Z",
+    "updated_at": "2026-09-29T05:09:34.096Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 24,
+  "fields": {
+    "name": "Organic Essentials",
+    "slug": "organic-essentials",
+    "description": "",
+    "image": "",
+    "parent": 21,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.102Z",
+    "updated_at": "2026-09-29T05:09:34.102Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 25,
+  "fields": {
+    "name": "Sports & Fitness",
+    "slug": "sports-fitness",
+    "description": "",
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 7,
+    "created_at": "2026-09-29T05:09:34.109Z",
+    "updated_at": "2026-10-05T06:53:07.017Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 26,
+  "fields": {
+    "name": "Gym Gear",
+    "slug": "gym-gear",
+    "description": "",
+    "image": "",
+    "parent": 25,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.117Z",
+    "updated_at": "2026-09-29T05:09:34.117Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 27,
+  "fields": {
+    "name": "Outdoor Sports",
+    "slug": "outdoor-sports",
+    "description": "",
+    "image": "",
+    "parent": 25,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.124Z",
+    "updated_at": "2026-09-29T05:09:34.124Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 28,
+  "fields": {
+    "name": "Yoga Mats",
+    "slug": "yoga-mats",
+    "description": "",
+    "image": "",
+    "parent": 25,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.134Z",
+    "updated_at": "2026-09-29T05:09:34.134Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 29,
+  "fields": {
+    "name": "Appliances",
+    "slug": "appliances",
+    "description": "",
+    "image": "categories/appliances.jpg",
+    "parent": null,
+    "is_active": true,
+    "order": 8,
+    "created_at": "2026-09-29T05:09:34.140Z",
+    "updated_at": "2026-09-30T04:34:50.216Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 30,
+  "fields": {
+    "name": "Kitchen Appliances",
+    "slug": "kitchen-appliances",
+    "description": "",
+    "image": "",
+    "parent": 29,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.151Z",
+    "updated_at": "2026-09-29T05:09:34.151Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 31,
+  "fields": {
+    "name": "Smart Home",
+    "slug": "smart-home",
+    "description": "",
+    "image": "",
+    "parent": 29,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.156Z",
+    "updated_at": "2026-09-29T05:09:34.156Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 32,
+  "fields": {
+    "name": "Air Purifiers",
+    "slug": "air-purifiers",
+    "description": "",
+    "image": "",
+    "parent": 29,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T05:09:34.163Z",
+    "updated_at": "2026-09-29T05:09:34.163Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 33,
+  "fields": {
+    "name": "Kitchen Storage",
+    "slug": "kitchen-storage",
+    "description": "",
+    "image": "",
+    "parent": 9,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.192Z",
+    "updated_at": "2026-09-29T06:05:57.192Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 34,
+  "fields": {
+    "name": "Running Shoes",
+    "slug": "running-shoes",
+    "description": "",
+    "image": "",
+    "parent": 17,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.216Z",
+    "updated_at": "2026-09-29T06:05:57.216Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 35,
+  "fields": {
+    "name": "Yoga & Wellness",
+    "slug": "yoga-wellness",
+    "description": "",
+    "image": "",
+    "parent": 25,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.241Z",
+    "updated_at": "2026-09-29T06:05:57.241Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 36,
+  "fields": {
+    "name": "Toys & Games",
+    "slug": "toys-games",
+    "description": "",
+    "image": "categories/toys.jpg",
+    "parent": null,
+    "is_active": true,
+    "order": 8,
+    "created_at": "2026-09-29T06:05:57.247Z",
+    "updated_at": "2026-09-30T04:34:50.207Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 37,
+  "fields": {
+    "name": "Action Toys",
+    "slug": "action-toys",
+    "description": "",
+    "image": "",
+    "parent": 36,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.260Z",
+    "updated_at": "2026-09-29T06:05:57.260Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 38,
+  "fields": {
+    "name": "Building Blocks",
+    "slug": "building-blocks",
+    "description": "",
+    "image": "",
+    "parent": 36,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.268Z",
+    "updated_at": "2026-09-29T06:05:57.268Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 39,
+  "fields": {
+    "name": "Board Games",
+    "slug": "board-games",
+    "description": "",
+    "image": "",
+    "parent": 36,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.275Z",
+    "updated_at": "2026-09-29T06:05:57.275Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 40,
+  "fields": {
+    "name": "Living Room",
+    "slug": "living-room",
+    "description": "",
+    "image": "",
+    "parent": 12,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.300Z",
+    "updated_at": "2026-09-29T06:05:57.300Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 41,
+  "fields": {
+    "name": "Bedrooms",
+    "slug": "bedrooms",
+    "description": "",
+    "image": "",
+    "parent": 12,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.307Z",
+    "updated_at": "2026-09-29T06:05:57.307Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 42,
+  "fields": {
+    "name": "Home Office",
+    "slug": "home-office",
+    "description": "",
+    "image": "",
+    "parent": 12,
+    "is_active": true,
+    "order": 0,
+    "created_at": "2026-09-29T06:05:57.314Z",
+    "updated_at": "2026-09-29T06:05:57.314Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 43,
+  "fields": {
+    "name": "Kids Wear",
+    "slug": "kids-wear",
+    "description": "Comfortable, stylish and durable everyday clothing for boys and girls.",
+    "image": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 1,
+    "created_at": "2026-10-05T06:53:07.004Z",
+    "updated_at": "2026-10-05T06:53:07.004Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 44,
+  "fields": {
+    "name": "Women's Wear",
+    "slug": "womens-wear",
+    "description": "Contemporary, ethnic and western fashion wear for modern women.",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 2,
+    "created_at": "2026-10-05T06:53:07.008Z",
+    "updated_at": "2026-10-05T06:53:07.008Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 45,
+  "fields": {
+    "name": "Sarees",
+    "slug": "sarees",
+    "description": "Handwoven traditional and contemporary festive sarees in silk, georgette, and chiffon.",
+    "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 3,
+    "created_at": "2026-10-05T06:53:07.009Z",
+    "updated_at": "2026-10-05T06:53:07.009Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 46,
+  "fields": {
+    "name": "Dresses",
+    "slug": "dresses",
+    "description": "Flattering casual, evening, cocktail and summer maxi dresses for every occasion.",
+    "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 4,
+    "created_at": "2026-10-05T06:53:07.010Z",
+    "updated_at": "2026-10-05T06:53:07.010Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 47,
+  "fields": {
+    "name": "College Wear",
+    "slug": "college-wear",
+    "description": "Trendy, relaxed, stylish campus outfits, hoodies, tees, and denim.",
+    "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 5,
+    "created_at": "2026-10-05T06:53:07.010Z",
+    "updated_at": "2026-10-05T06:53:07.010Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 48,
+  "fields": {
+    "name": "Party Wear",
+    "slug": "party-wear",
+    "description": "Celebration and evening ready gowns, blazers, and statement evening wear.",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 6,
+    "created_at": "2026-10-05T06:53:07.011Z",
+    "updated_at": "2026-10-05T06:53:07.011Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 49,
+  "fields": {
+    "name": "Office Wear",
+    "slug": "office-wear",
+    "description": "Crisp, structured formal shirts, trousers, and power blazers for professionals.",
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 7,
+    "created_at": "2026-10-05T06:53:07.012Z",
+    "updated_at": "2026-10-05T06:53:07.012Z"
+  }
+},
+{
+  "model": "categories.category",
+  "pk": 50,
+  "fields": {
+    "name": "Accessories",
+    "slug": "accessories",
+    "description": "Watches, sunglasses, leather wallets, belts and designer handbags.",
+    "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80",
+    "parent": null,
+    "is_active": true,
+    "order": 8,
+    "created_at": "2026-10-05T06:53:07.012Z",
+    "updated_at": "2026-10-05T06:53:07.012Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "seller": 1,
+    "category": 5,
+    "subcategory": 8,
+    "name": "Wireless Bluetooth Noise Cancelling Headphones",
+    "slug": "aeroglide-wireless-noise-cancelling-headphones",
+    "description": "Experience theater-grade sound with the AeroGlide ANC headphones. Equipped with custom tuned 40mm neodymium drivers, spatial audio algorithms, and plush memory foam ear cushions for all-day comfort. Features fast USB-C charging giving 5 hours of playback in 10 minutes.",
+    "short_description": "40dB Hybrid Active Noise Cancellation with 50-hour ultra battery life.",
+    "brand": "SoundWave Pro",
+    "sku": "SPS-SKU-0001",
+    "price": "4999.00",
+    "discount_price": "2499.00",
+    "discount_percentage": 50,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.67",
+    "review_count": 3,
+    "thumbnail": "products/thumbnails/wireless-bluetooth-headphones.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T05:09:34.174Z",
+    "updated_at": "2026-09-30T04:34:50.234Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "seller": 1,
+    "category": 5,
+    "subcategory": 7,
+    "name": "Vanguard Ultra Slim 15.6\" Gaming Laptop",
+    "slug": "vanguard-ultra-slim-156-ips-laptop",
+    "description": "Engineered for seamless productivity and entertainment. Crafted in a featherlight unibody aerospace aluminum chassis weighing just 1.4kg. Vibrant 100% sRGB anti-glare display with precision trackpad and full-day 11-hour battery life.",
+    "short_description": "Fast 16GB LPDDR5, 512GB NVMe SSD, Quad-Core Ultra processor with backlit keyboard.",
+    "brand": "Vanguard Tech",
+    "sku": "SPS-SKU-0002",
+    "price": "59999.00",
+    "discount_price": "47999.00",
+    "discount_percentage": 20,
+    "stock_quantity": 18,
+    "minimum_order_quantity": 1,
+    "rating": "4.67",
+    "review_count": 3,
+    "thumbnail": "products/thumbnails/gaming-laptop.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T05:09:34.201Z",
+    "updated_at": "2026-09-30T04:34:50.288Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "seller": 1,
+    "category": 5,
+    "subcategory": 6,
+    "name": "Nova 5G Pro Flagship Smartphone",
+    "slug": "novapulse-5g-smartphone-with-108mp-studio-camera",
+    "description": "Capture life in razor sharp clarity with the 108MP AI triple camera array. Powered by a massive 5000mAh battery that charges from 0 to 100% in 38 minutes. Dual stereo speakers with Dolby Atmos sound.",
+    "short_description": "120Hz FHD+ AMOLED display, 67W Turbo Charge, Dimensity octa-core 5G SoC.",
+    "brand": "Nova Mobile",
+    "sku": "SPS-SKU-0003",
+    "price": "29999.00",
+    "discount_price": "22999.00",
+    "discount_percentage": 23,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.67",
+    "review_count": 3,
+    "thumbnail": "products/thumbnails/smartphone.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T05:09:34.222Z",
+    "updated_at": "2026-09-30T04:34:50.330Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": 8,
+    "name": "Titan Edge OLED Fitness Smart Watch",
+    "slug": "pure-cotton-premium-casual-oxford-shirt",
+    "description": "A timeless wardrobe essential crafted from 100% long-staple combed cotton. Soft pre-washed finish prevents shrinkage while maintaining crisp collar structure across multiple washes.",
+    "short_description": "Breathable combed cotton with tailored regular fit and button-down collar.",
+    "brand": "Titan Tech",
+    "sku": "SPS-SKU-0004",
+    "price": "4499.00",
+    "discount_price": "1999.00",
+    "discount_percentage": 56,
+    "stock_quantity": 120,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 185,
+    "thumbnail": "products/thumbnails/smart-watch.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T05:09:34.243Z",
+    "updated_at": "2026-09-30T04:34:50.374Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": 8,
+    "name": "BoomBlast Portable Waterproof Bluetooth Speaker",
+    "slug": "elegance-floral-georgette-anarkali-kurta-set",
+    "description": "Exude effortless grace with this breathable georgette Anarkali set. Features zari embroidered round neckline, 3/4 sleeves, and flared kalis that drape elegantly for festive and casual occasions.",
+    "short_description": "Hand-printed delicate floral motifs with matching dupatta and churidar.",
+    "brand": "SoundWave Pro",
+    "sku": "SPS-SKU-0005",
+    "price": "3499.00",
+    "discount_price": "1699.00",
+    "discount_percentage": 51,
+    "stock_quantity": 65,
+    "minimum_order_quantity": 1,
+    "rating": "4.50",
+    "review_count": 78,
+    "thumbnail": "products/thumbnails/bluetooth-speaker.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T05:09:34.330Z",
+    "updated_at": "2026-09-30T04:34:50.412Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "seller": 1,
+    "category": 5,
+    "subcategory": 8,
+    "name": "ErgoGrip Wireless Optical Mouse",
+    "slug": "cloudstride-air-cushion-running-sneakers",
+    "description": "Step into unparalleled energy return with CloudStride sneakers. High-traction rubber outsole offers confident grip on road and trail surfaces while ortholite anti-microbial insoles keep your feet fresh.",
+    "short_description": "Responsive nitrogen-infused EVA midsole with breathable engineered mesh.",
+    "brand": "Vanguard Tech",
+    "sku": "SPS-SKU-0006",
+    "price": "1499.00",
+    "discount_price": "699.00",
+    "discount_percentage": 53,
+    "stock_quantity": 70,
+    "minimum_order_quantity": 1,
+    "rating": "4.40",
+    "review_count": 92,
+    "thumbnail": "products/thumbnails/wireless-mouse.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T05:09:34.363Z",
+    "updated_at": "2026-09-30T04:34:50.446Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": 8,
+    "name": "RGB Backlit Mechanical Gaming Keyboard",
+    "slug": "tri-ply-stainless-steel-heavy-base-cookware-set-3-pcs",
+    "description": "Triple layered body combines an aluminum core sandwiched between heavy-gauge food grade steel. Includes frying pan, deep kadai with tempered glass lid, and sauce pan.",
+    "short_description": "Induction-friendly 18/10 food-grade steel with uniform heat distribution.",
+    "brand": "Vanguard Tech",
+    "sku": "SPS-SKU-0007",
+    "price": "3999.00",
+    "discount_price": "2299.00",
+    "discount_percentage": 43,
+    "stock_quantity": 30,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 114,
+    "thumbnail": "products/thumbnails/mechanical-keyboard.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T05:09:34.391Z",
+    "updated_at": "2026-09-30T04:34:50.478Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": 7,
+    "name": "Zenith Tab 11\" 2K IPS Tablet with Stylus",
+    "slug": "botanical-radiance-vitamin-c-hyaluronic-face-serum-30ml",
+    "description": "Formulated with cold-pressed botanical extracts, Kakadu plum, ferulic acid, and multi-molecular hyaluronic acid. Dermatologically tested, vegan, paraben-free, and cruelty-free.",
+    "short_description": "Brightens dark spots, firms fine lines, and deeply hydrates with 15% active ethyl ascorbic acid.",
+    "brand": "Nova Mobile",
+    "sku": "SPS-SKU-0008",
+    "price": "24999.00",
+    "discount_price": "18999.00",
+    "discount_percentage": 24,
+    "stock_quantity": 90,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 48,
+    "thumbnail": "products/thumbnails/tablet.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T05:09:34.402Z",
+    "updated_at": "2026-09-30T04:34:50.567Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "seller": 1,
+    "category": 5,
+    "subcategory": 8,
+    "name": "PowerCore 20000mAh 22.5W Fast Charge Power Bank",
+    "slug": "artisanal-roasted-california-almonds-jumbo-cashews-combo-1kg",
+    "description": "Hand-sorted premium jumbo grade nuts rich in healthy unsaturated fats, plant protein, and dietary fiber. Zero trans fats and zero artificial preservatives.",
+    "short_description": "Himalayan pink salt dry-roasted dry fruits in vacuum sealed resealable pouch.",
+    "brand": "SoundWave Pro",
+    "sku": "SPS-SKU-0009",
+    "price": "2499.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 52,
+    "stock_quantity": 150,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 160,
+    "thumbnail": "products/thumbnails/power-bank.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T05:09:34.409Z",
+    "updated_at": "2026-09-30T04:34:50.607Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "seller": 1,
+    "category": 5,
+    "subcategory": 8,
+    "name": "65W GaN Dual Port USB-C Fast Wall Charger",
+    "slug": "proflex-non-slip-dual-layer-eco-tpe-yoga-mat-6mm",
+    "description": "Certified non-toxic, odorless eco-TPE foam provides optimal cushioning for spine, hips, and joints during intense workouts, pilates, and yoga practices.",
+    "short_description": "Alignment lines guide posture with sweat-resistant textured anti-tear grip.",
+    "brand": "SoundWave Pro",
+    "sku": "SPS-SKU-0010",
+    "price": "1999.00",
+    "discount_price": "899.00",
+    "discount_percentage": 55,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 130,
+    "thumbnail": "products/thumbnails/usb-c-charger.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T05:09:34.418Z",
+    "updated_at": "2026-09-30T04:34:50.648Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "seller": 2,
+    "category": 1,
+    "subcategory": 2,
+    "name": "Men's Premium 100% Breathable Cotton Casual Shirt",
+    "slug": "mens-premium-100-breathable-cotton-casual-shirt",
+    "description": "Designed for smart-casual Fridays and evening outings. Features curved hemline, pearlized buttons, and reinforced double stitching for timeless durability.",
+    "short_description": "Soft-washed pre-shrunk pure combed cotton with modern slim spread collar.",
+    "brand": "Aura Wear",
+    "sku": "SPS-SKU-0011",
+    "price": "1999.00",
+    "discount_price": "899.00",
+    "discount_percentage": 55,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 95,
+    "thumbnail": "products/thumbnails/mens-casual-shirt.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:57.706Z",
+    "updated_at": "2026-09-30T04:34:50.669Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "seller": 2,
+    "category": 17,
+    "subcategory": 34,
+    "name": "Men's CloudStride Cushion Engineered Running Shoes",
+    "slug": "mens-cloudstride-cushion-engineered-running-shoes",
+    "description": "High-traction anti-skid rubber outsole grips road and gym floors. Padded collar and anatomical arch support minimize impact during long distance runs.",
+    "short_description": "Ultra-responsive rebound EVA midsole with breathable engineered flyknit mesh upper.",
+    "brand": "Apex Athletics",
+    "sku": "SPS-SKU-0012",
+    "price": "3499.00",
+    "discount_price": "1699.00",
+    "discount_percentage": 51,
+    "stock_quantity": 40,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 180,
+    "thumbnail": "products/thumbnails/mens-running-shoes.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:57.739Z",
+    "updated_at": "2026-09-30T04:34:50.718Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "seller": 2,
+    "category": 1,
+    "subcategory": 3,
+    "name": "Women's Royal Embroidered Anarkali Cotton Kurti",
+    "slug": "womens-royal-embroidered-anarkali-cotton-kurti",
+    "description": "Handcrafted by artisan weavers using breathable premium viscose rayon. Features elegant three-quarter sleeves and mandarin keyhole collar.",
+    "short_description": "Graceful flared silhouette adorned with zari threadwork and gota patti borders.",
+    "brand": "Aura Wear",
+    "sku": "SPS-SKU-0013",
+    "price": "2499.00",
+    "discount_price": "999.00",
+    "discount_percentage": 60,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 140,
+    "thumbnail": "products/thumbnails/womens-kurti.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:57.778Z",
+    "updated_at": "2026-09-30T04:34:50.766Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "seller": 2,
+    "category": 1,
+    "subcategory": 3,
+    "name": "Women's Handwoven Kanjeevaram Silk Saree with Blouse Piece",
+    "slug": "womens-handwoven-kanjeevaram-silk-saree-with-blouse-piece",
+    "description": "A treasured masterpiece for weddings and festive celebrations. Comes with an unstitched 80cm brocade matching blouse piece.",
+    "short_description": "Pure silk blend embellished with intricate golden zari floral motifs and contrast pallu.",
+    "brand": "Aura Wear",
+    "sku": "SPS-SKU-0014",
+    "price": "5999.00",
+    "discount_price": "2999.00",
+    "discount_percentage": 50,
+    "stock_quantity": 25,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 88,
+    "thumbnail": "products/thumbnails/womens-saree.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:57.810Z",
+    "updated_at": "2026-09-30T04:34:50.811Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "seller": 2,
+    "category": 1,
+    "subcategory": 3,
+    "name": "Women's Structured Vegan Leather Shoulder Handbag",
+    "slug": "womens-structured-vegan-leather-shoulder-handbag",
+    "description": "Spacious water-resistant luxury vegan leather fits tablet, wallet, makeup kit, and essentials with smooth zippered security.",
+    "short_description": "Triple compartment tote with gold-tone hardware and detachable shoulder strap.",
+    "brand": "Aura Wear",
+    "sku": "SPS-SKU-0015",
+    "price": "2999.00",
+    "discount_price": "1399.00",
+    "discount_percentage": 53,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.50",
+    "review_count": 72,
+    "thumbnail": "products/thumbnails/womens-handbag.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:57.827Z",
+    "updated_at": "2026-09-30T04:34:50.831Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "seller": 2,
+    "category": 1,
+    "subcategory": 2,
+    "name": "Men's Classic Slim-Fit Stretch Denim Jeans",
+    "slug": "mens-classic-slim-fit-stretch-denim-jeans",
+    "description": "Reinforced rivets, durable YKK brass zipper fly, and classic 5-pocket styling. Resists fading wash after wash.",
+    "short_description": "98% Cotton with 2% Elastane for all-day flexible movement and vintage wash.",
+    "brand": "Aura Wear",
+    "sku": "SPS-SKU-0016",
+    "price": "2499.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 52,
+    "stock_quantity": 40,
+    "minimum_order_quantity": 1,
+    "rating": "4.40",
+    "review_count": 60,
+    "thumbnail": "products/thumbnails/mens-jeans.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:57.853Z",
+    "updated_at": "2026-09-30T04:34:50.873Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "seller": 2,
+    "category": 1,
+    "subcategory": 4,
+    "name": "Kids Organic Cotton Play Graphic T-Shirt",
+    "slug": "kids-organic-cotton-play-graphic-t-shirt",
+    "description": "Durable rib knit neckband and tagless neck label for scratch-free daily play sessions.",
+    "short_description": "Bio-washed non-toxic water-based prints, super gentle on sensitive child skin.",
+    "brand": "Aura Wear",
+    "sku": "SPS-SKU-0017",
+    "price": "899.00",
+    "discount_price": "399.00",
+    "discount_percentage": 56,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 42,
+    "thumbnail": "products/thumbnails/kids-tshirt.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:57.885Z",
+    "updated_at": "2026-09-30T04:34:50.913Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "seller": 2,
+    "category": 17,
+    "subcategory": 18,
+    "name": "Women's Minimalist White Platform Casual Sneakers",
+    "slug": "womens-minimalist-white-platform-casual-sneakers",
+    "description": "Elevate your everyday wardrobe with versatile clean aesthetic lines that pair perfectly with jeans, dresses, or athleisure.",
+    "short_description": "Comfortable memory foam footbed with easy wipe-clean synthetic leather upper.",
+    "brand": "Apex Athletics",
+    "sku": "SPS-SKU-0018",
+    "price": "2799.00",
+    "discount_price": "1299.00",
+    "discount_percentage": 54,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 118,
+    "thumbnail": "products/thumbnails/womens-sneakers.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:57.918Z",
+    "updated_at": "2026-09-30T04:34:50.947Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "seller": 1,
+    "category": 9,
+    "subcategory": 33,
+    "name": "Barista Touch Espresso & Filter Coffee Maker Machine",
+    "slug": "barista-touch-espresso-filter-coffee-maker-machine",
+    "description": "Brew rich velvety cappuccinos, lattes, and intense espresso shots right on your kitchen counter. Features reusable stainless steel mesh filter and dual-shot portafilter.",
+    "short_description": "15-bar Italian pump pressure, steam milk frother wand, heat-resistant borosilicate carafe.",
+    "brand": "Culina Master",
+    "sku": "SPS-SKU-0019",
+    "price": "8999.00",
+    "discount_price": "4999.00",
+    "discount_percentage": 44,
+    "stock_quantity": 25,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 82,
+    "thumbnail": "products/thumbnails/coffee-maker.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:57.958Z",
+    "updated_at": "2026-09-30T04:34:50.993Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "seller": 1,
+    "category": 9,
+    "subcategory": 33,
+    "name": "Stainless Steel 1.8L Rapid Boil Electric Kettle",
+    "slug": "stainless-steel-18l-rapid-boil-electric-kettle",
+    "description": "Boils water in under 4 minutes. 360-degree swivel cordless base, cool-touch handle, and boil-dry protection ensure utmost family safety.",
+    "short_description": "1500W rapid heating, food-grade 304 stainless steel interior with auto shut-off.",
+    "brand": "Culina Master",
+    "sku": "SPS-SKU-0020",
+    "price": "1799.00",
+    "discount_price": "799.00",
+    "discount_percentage": 56,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 160,
+    "thumbnail": "products/thumbnails/electric-kettle.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:57.974Z",
+    "updated_at": "2026-09-30T04:34:51.017Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "seller": 1,
+    "category": 9,
+    "subcategory": 10,
+    "name": "5-Piece Granite Non-Stick Induction Cookware Set",
+    "slug": "5-piece-granite-non-stick-induction-cookware-set",
+    "description": "Compatible with gas stoves, induction tops, and electric burners. Cook healthy meals with minimal oil without sticking or burning.",
+    "short_description": "PFOA-free 5-layer German granite coating with tempered glass lids and stay-cool handles.",
+    "brand": "Culina Master",
+    "sku": "SPS-SKU-0021",
+    "price": "4999.00",
+    "discount_price": "2499.00",
+    "discount_percentage": 50,
+    "stock_quantity": 30,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 94,
+    "thumbnail": "products/thumbnails/cookware-set.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:57.986Z",
+    "updated_at": "2026-09-30T04:34:51.032Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "seller": 1,
+    "category": 29,
+    "subcategory": 30,
+    "name": "750W Heavy Duty Multi-Jar Mixer Grinder",
+    "slug": "750w-heavy-duty-multi-jar-mixer-grinder",
+    "description": "Effortlessly grinds tough idli batter, turmeric roots, and dry masalas with razor-sharp 304 hardened steel blades.",
+    "short_description": "100% Copper motor, 3 stainless steel jars with flow breakers and overload protector.",
+    "brand": "Culina Master",
+    "sku": "SPS-SKU-0022",
+    "price": "3999.00",
+    "discount_price": "2199.00",
+    "discount_percentage": 45,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.50",
+    "review_count": 76,
+    "thumbnail": "products/thumbnails/mixer-grinder.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:57.999Z",
+    "updated_at": "2026-09-30T04:34:51.058Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "seller": 2,
+    "category": 9,
+    "subcategory": 33,
+    "name": "Vacuum Insulated Stainless Steel Water Bottle 1000ml",
+    "slug": "vacuum-insulated-stainless-steel-water-bottle-1000ml",
+    "description": "Food grade 18/8 stainless steel, BPA-free leakproof chug cap with silicone seal. Fits standard car cup holders and gym backpacks.",
+    "short_description": "Keeps drinks ice-cold for 24 hours or piping hot for 12 hours with condensation-free grip.",
+    "brand": "Apex Athletics",
+    "sku": "SPS-SKU-0023",
+    "price": "1299.00",
+    "discount_price": "549.00",
+    "discount_percentage": 58,
+    "stock_quantity": 70,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 110,
+    "thumbnail": "products/thumbnails/water-bottle.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.012Z",
+    "updated_at": "2026-09-30T04:34:51.091Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "seller": 2,
+    "category": 9,
+    "subcategory": 11,
+    "name": "Modern Nordic Ceramic Bedside Table Lamp",
+    "slug": "modern-nordic-ceramic-bedside-table-lamp",
+    "description": "Creates a tranquil cozy sanctuary in living rooms and bedrooms. Standard E27 socket compatible with smart LED bulbs.",
+    "short_description": "Hand-glazed ceramic base with textured linen fabric drum shade emitting gentle ambient glow.",
+    "brand": "Culina Master",
+    "sku": "SPS-SKU-0024",
+    "price": "2499.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 52,
+    "stock_quantity": 28,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 55,
+    "thumbnail": "products/thumbnails/table-lamp.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.039Z",
+    "updated_at": "2026-09-30T04:34:51.124Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "seller": 2,
+    "category": 9,
+    "subcategory": 11,
+    "name": "400 Thread Count Pure Egyptian Cotton King Bedsheet Set",
+    "slug": "400-thread-count-pure-egyptian-cotton-king-bedsheet-set",
+    "description": "Naturally hypoallergenic and temperature-regulating for deep restorative slumber. Machine washable with shrink-proof finish.",
+    "short_description": "Silky sateen weave, includes 1 King Flat Sheet (108\"x108\") and 2 matching pillowcases.",
+    "brand": "Aura Wear",
+    "sku": "SPS-SKU-0025",
+    "price": "2999.00",
+    "discount_price": "1399.00",
+    "discount_percentage": 53,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 80,
+    "thumbnail": "products/thumbnails/bedsheet-set.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.054Z",
+    "updated_at": "2026-09-30T04:34:51.142Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "seller": 2,
+    "category": 13,
+    "subcategory": 14,
+    "name": "Vitamin C Brightening Foaming Face Wash with Brush 150ml",
+    "slug": "vitamin-c-brightening-foaming-face-wash-with-brush-150ml",
+    "description": "Fades stubborn dark spots, eliminates excess sebum, and restores natural luminous radiance without drying out the skin barrier.",
+    "short_description": "Infused with Kakadu Plum, Mulberry extract, and gentle silicone deep-pore cleansing bristles.",
+    "brand": "GlowEssence Botanicals",
+    "sku": "SPS-SKU-0026",
+    "price": "699.00",
+    "discount_price": "349.00",
+    "discount_percentage": 50,
+    "stock_quantity": 65,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 190,
+    "thumbnail": "products/thumbnails/face-wash.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:58.078Z",
+    "updated_at": "2026-09-30T04:34:51.175Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "seller": 2,
+    "category": 13,
+    "subcategory": 14,
+    "name": "Hyaluronic Acid 72-Hour Intense Moisture Gel Cream 50g",
+    "slug": "hyaluronic-acid-72-hour-intense-moisture-gel-cream-50g",
+    "description": "Instantly plumps fine dehydration lines, locks in dermal moisture for 72 hours, and absorbs rapidly leaving a velvety matte canvas.",
+    "short_description": "Ultra-lightweight oil-free formula with 5 multi-molecular weights of Hyaluronic Acid & Ceramides.",
+    "brand": "GlowEssence Botanicals",
+    "sku": "SPS-SKU-0027",
+    "price": "899.00",
+    "discount_price": "499.00",
+    "discount_percentage": 44,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 130,
+    "thumbnail": "products/thumbnails/moisturizer.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:58.092Z",
+    "updated_at": "2026-09-30T04:34:51.206Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 28,
+  "fields": {
+    "seller": 2,
+    "category": 13,
+    "subcategory": 16,
+    "name": "Moroccan Argan Oil Anti-Frizz Restoring Shampoo 300ml",
+    "slug": "moroccan-argan-oil-anti-frizz-restoring-shampoo-300ml",
+    "description": "Enriched with pure cold-pressed Moroccan argan oil and keratin protein to tame split ends, restore mirror shine, and prevent hair fall.",
+    "short_description": "Sulfate, paraben, and silicone-free botanical nourishment for dry, damaged, or colored tresses.",
+    "brand": "GlowEssence Botanicals",
+    "sku": "SPS-SKU-0028",
+    "price": "799.00",
+    "discount_price": "399.00",
+    "discount_percentage": 50,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.50",
+    "review_count": 74,
+    "thumbnail": "products/thumbnails/shampoo.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.106Z",
+    "updated_at": "2026-09-30T04:34:51.224Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 29,
+  "fields": {
+    "seller": 2,
+    "category": 13,
+    "subcategory": 14,
+    "name": "Velvet Matte Longwear Transfer-Proof Lipstick 3.8g",
+    "slug": "velvet-matte-longwear-transfer-proof-lipstick-38g",
+    "description": "Glides on effortlessly in a single swipe with intense color payoff that stays comfortable and weightless all day long.",
+    "short_description": "16-hour smudge-free pigmentation infused with Vitamin E and Jojoba oil.",
+    "brand": "GlowEssence Botanicals",
+    "sku": "SPS-SKU-0029",
+    "price": "699.00",
+    "discount_price": "299.00",
+    "discount_percentage": 57,
+    "stock_quantity": 60,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 88,
+    "thumbnail": "products/thumbnails/lipstick.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.119Z",
+    "updated_at": "2026-09-30T04:34:51.240Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 30,
+  "fields": {
+    "seller": 2,
+    "category": 13,
+    "subcategory": 14,
+    "name": "Ultra Light Invisible Gel Sunscreen SPF 50+ PA++++ 50g",
+    "slug": "ultra-light-invisible-gel-sunscreen-spf-50-pa-50g",
+    "description": "Dermatologically tested for all skin types, including acne-prone skin. Leaves an invisible, breathable primer finish under makeup.",
+    "short_description": "Zero white cast, non-sticky water-based shield against UVA, UVB, and blue light.",
+    "brand": "GlowEssence Botanicals",
+    "sku": "SPS-SKU-0030",
+    "price": "749.00",
+    "discount_price": "449.00",
+    "discount_percentage": 40,
+    "stock_quantity": 70,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 220,
+    "thumbnail": "products/thumbnails/sunscreen.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:58.142Z",
+    "updated_at": "2026-09-30T04:34:51.271Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 31,
+  "fields": {
+    "seller": 2,
+    "category": 13,
+    "subcategory": 15,
+    "name": "Signature Artisanal Eau De Parfum Luxury Fragrance 100ml",
+    "slug": "signature-artisanal-eau-de-parfum-luxury-fragrance-100ml",
+    "description": "Hand-crafted French perfume oil formulation with exceptional sillage that lingers elegantly through day and night.",
+    "short_description": "Captivating blend of bergamot, smoky amber, french lavender, and cedarwood notes.",
+    "brand": "GlowEssence Botanicals",
+    "sku": "SPS-SKU-0031",
+    "price": "2499.00",
+    "discount_price": "1299.00",
+    "discount_percentage": 48,
+    "stock_quantity": 30,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 62,
+    "thumbnail": "products/thumbnails/perfume.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.154Z",
+    "updated_at": "2026-09-30T04:34:51.291Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 32,
+  "fields": {
+    "seller": 1,
+    "category": 25,
+    "subcategory": 27,
+    "name": "ProStrike Grade-1 English Willow Cricket Bat",
+    "slug": "prostrike-grade-1-english-willow-cricket-bat",
+    "description": "Pre-knocked by master craftsmen for supreme power hitting. Includes padded thermal protection cover.",
+    "short_description": "Massive contoured edges, perfect balance pickup, multi-piece cane handle with chevron grip.",
+    "brand": "Zenith Gear",
+    "sku": "SPS-SKU-0032",
+    "price": "8999.00",
+    "discount_price": "4999.00",
+    "discount_percentage": 44,
+    "stock_quantity": 20,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 50,
+    "thumbnail": "products/thumbnails/cricket-bat.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.167Z",
+    "updated_at": "2026-09-30T04:34:51.306Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 33,
+  "fields": {
+    "seller": 1,
+    "category": 25,
+    "subcategory": 27,
+    "name": "FIFA-Standard Thermally Bonded Match Football (Size 5)",
+    "slug": "fifa-standard-thermally-bonded-match-football-size-5",
+    "description": "Waterproof construction performs consistently across rainy grass pitches and indoor turf arenas.",
+    "short_description": "Seamless textured aerodynamic PU surface with butyl bladder for optimal air retention.",
+    "brand": "Zenith Gear",
+    "sku": "SPS-SKU-0033",
+    "price": "1899.00",
+    "discount_price": "899.00",
+    "discount_percentage": 53,
+    "stock_quantity": 40,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 68,
+    "thumbnail": "products/thumbnails/football.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.180Z",
+    "updated_at": "2026-09-30T04:34:51.321Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 34,
+  "fields": {
+    "seller": 1,
+    "category": 25,
+    "subcategory": 27,
+    "name": "Carbon Fiber High-Tension Badminton Racket Dual Set",
+    "slug": "carbon-fiber-high-tension-badminton-racket-dual-set",
+    "description": "Weighs only 82 grams for explosive smashes and swift wrist control during fast competitive rallies.",
+    "short_description": "Isometric head frame, pre-strung at 28 lbs tension with full zippered protective carry bag.",
+    "brand": "Zenith Gear",
+    "sku": "SPS-SKU-0034",
+    "price": "2999.00",
+    "discount_price": "1499.00",
+    "discount_percentage": 50,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 82,
+    "thumbnail": "products/thumbnails/badminton-racket.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.193Z",
+    "updated_at": "2026-09-30T04:34:51.337Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 35,
+  "fields": {
+    "seller": 1,
+    "category": 25,
+    "subcategory": 35,
+    "name": "ProFlex Non-Slip Dual Layer Eco TPE Yoga Mat (6mm)",
+    "slug": "proflex-non-slip-dual-layer-eco-tpe-yoga-mat-6mm-1",
+    "description": "Certified non-toxic, odorless eco-TPE foam provides optimal joint cushioning during intense pilates, yoga, and calisthenics.",
+    "short_description": "Body alignment line markings, sweat-resistant textured anti-tear grip with carry strap.",
+    "brand": "Zenith Gear",
+    "sku": "SPS-SKU-0035",
+    "price": "1899.00",
+    "discount_price": "899.00",
+    "discount_percentage": 53,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 110,
+    "thumbnail": "products/thumbnails/yoga-mat.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:58.207Z",
+    "updated_at": "2026-09-30T04:34:51.353Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 36,
+  "fields": {
+    "seller": 2,
+    "category": 21,
+    "subcategory": 24,
+    "name": "Royal Selection Aged Extra Long Basmati Rice 5kg",
+    "slug": "royal-selection-aged-extra-long-basmati-rice-5kg",
+    "description": "Fluffy non-sticky slender grains perfect for rich biryanis, aromatic pulavs, and royal dinner banquets.",
+    "short_description": "Naturally aged for 2 years in Himalayan foothills, elongates to more than twice its length.",
+    "brand": "PureOrigin Farms",
+    "sku": "SPS-SKU-0036",
+    "price": "899.00",
+    "discount_price": "549.00",
+    "discount_percentage": 39,
+    "stock_quantity": 80,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 150,
+    "thumbnail": "products/thumbnails/basmati-rice.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:58.228Z",
+    "updated_at": "2026-09-30T04:34:51.385Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 37,
+  "fields": {
+    "seller": 2,
+    "category": 21,
+    "subcategory": 24,
+    "name": "Cold Pressed Pure Virgin Cooking Oil 1 Litre",
+    "slug": "cold-pressed-pure-virgin-cooking-oil-1-litre",
+    "description": "Zero cholesterol, zero trans fats, and zero chemicals. Retains pristine aroma and essential nutrients.",
+    "short_description": "Wood pressed kachi ghani unrefined oil rich in natural antioxidants and omega-3.",
+    "brand": "PureOrigin Farms",
+    "sku": "SPS-SKU-0037",
+    "price": "499.00",
+    "discount_price": "299.00",
+    "discount_percentage": 40,
+    "stock_quantity": 60,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 64,
+    "thumbnail": "products/thumbnails/cooking-oil.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.243Z",
+    "updated_at": "2026-09-30T04:34:51.404Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 38,
+  "fields": {
+    "seller": 2,
+    "category": 21,
+    "subcategory": 23,
+    "name": "Whole Leaf Darjeeling Organic Green Tea Tin 250g",
+    "slug": "whole-leaf-darjeeling-organic-green-tea-tin-250g",
+    "description": "Subtle floral tasting notes without bitterness. Sealed in an airtight tin canister to preserve garden freshness.",
+    "short_description": "Hand-picked first flush loose leaves bursting with metabolism-boosting catechins.",
+    "brand": "PureOrigin Farms",
+    "sku": "SPS-SKU-0038",
+    "price": "699.00",
+    "discount_price": "399.00",
+    "discount_percentage": 43,
+    "stock_quantity": 55,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 72,
+    "thumbnail": "products/thumbnails/green-tea.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.256Z",
+    "updated_at": "2026-09-30T04:34:51.419Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 39,
+  "fields": {
+    "seller": 2,
+    "category": 21,
+    "subcategory": 22,
+    "name": "California Jumbo Roasted Almonds & Cashews Mix 500g",
+    "slug": "california-jumbo-roasted-almonds-cashews-mix-500g",
+    "description": "Crunchy premium nuts delivered in a resealable ziplock pouch for healthy guilt-free daily snacking.",
+    "short_description": "Gently roasted with Himalayan pink salt, packed with plant protein and dietary fiber.",
+    "brand": "PureOrigin Farms",
+    "sku": "SPS-SKU-0039",
+    "price": "899.00",
+    "discount_price": "599.00",
+    "discount_percentage": 33,
+    "stock_quantity": 70,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 175,
+    "thumbnail": "products/thumbnails/dry-fruits.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:58.269Z",
+    "updated_at": "2026-09-30T04:34:51.438Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 40,
+  "fields": {
+    "seller": 1,
+    "category": 36,
+    "subcategory": 37,
+    "name": "4WD High-Speed Off-Road Monster Remote Control Car",
+    "slug": "4wd-high-speed-off-road-monster-remote-control-car",
+    "description": "Climbs rocks, carpets, and sandy paths with heavy-duty rubber tires and independent spring suspension.",
+    "short_description": "2.4GHz anti-interference controller, shock absorbers, rechargeable battery (25km/h speed).",
+    "brand": "PlaySphere Kids",
+    "sku": "SPS-SKU-0040",
+    "price": "2999.00",
+    "discount_price": "1499.00",
+    "discount_percentage": 50,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 86,
+    "thumbnail": "products/thumbnails/rc-car.jpg",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-09-29T06:05:58.288Z",
+    "updated_at": "2026-09-30T04:34:51.456Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 41,
+  "fields": {
+    "seller": 1,
+    "category": 36,
+    "subcategory": 38,
+    "name": "500-Piece Creative Architecture Building Blocks Set",
+    "slug": "500-piece-creative-architecture-building-blocks-set",
+    "description": "Compatible with all major brand building brick systems. Includes step-by-step idea booklet and storage tub.",
+    "short_description": "Vibrant interlocking educational bricks develop spatial awareness and STEM motor skills.",
+    "brand": "PlaySphere Kids",
+    "sku": "SPS-SKU-0041",
+    "price": "1999.00",
+    "discount_price": "999.00",
+    "discount_percentage": 50,
+    "stock_quantity": 40,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 92,
+    "thumbnail": "products/thumbnails/building-blocks.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.305Z",
+    "updated_at": "2026-09-30T04:34:51.504Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 42,
+  "fields": {
+    "seller": 1,
+    "category": 36,
+    "subcategory": 37,
+    "name": "Giant Ultra Soft Cuddly Plush Teddy Bear 3 Feet",
+    "slug": "giant-ultra-soft-cuddly-plush-teddy-bear-3-feet",
+    "description": "The timeless gift for birthdays, anniversaries, and kids nursery decor with satin ribbon bow tie.",
+    "short_description": "Hypoallergenic virgin microfiber filling with velvety plush huggable fur.",
+    "brand": "PlaySphere Kids",
+    "sku": "SPS-SKU-0042",
+    "price": "2499.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 52,
+    "stock_quantity": 30,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 115,
+    "thumbnail": "products/thumbnails/teddy-bear.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.327Z",
+    "updated_at": "2026-09-30T04:34:51.522Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 43,
+  "fields": {
+    "seller": 1,
+    "category": 36,
+    "subcategory": 39,
+    "name": "Deluxe Handcrafted Wooden Chess & Board Game Set",
+    "slug": "deluxe-handcrafted-wooden-chess-board-game-set",
+    "description": "Polished Staunton style wooden chessmen weighted for satisfying tactile gameplay.",
+    "short_description": "Magnetic folding wooden gameboard with velvet-lined interior piece storage compartments.",
+    "brand": "PlaySphere Kids",
+    "sku": "SPS-SKU-0043",
+    "price": "1899.00",
+    "discount_price": "899.00",
+    "discount_percentage": 53,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 78,
+    "thumbnail": "products/thumbnails/board-game.jpg",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-09-29T06:05:58.346Z",
+    "updated_at": "2026-09-30T04:34:51.542Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 44,
+  "fields": {
+    "seller": 2,
+    "category": 43,
+    "subcategory": null,
+    "name": "Kids Organic Cotton Dinosaur Play Graphic T-Shirt",
+    "slug": "kids-organic-cotton-dinosaur-graphic-tshirt",
+    "description": "Designed for active play and gentle on sensitive skin. Made with 100% GOTS certified organic combed cotton, tagless neckline for zero itch, and reinforced double stitching at the collar and hem.",
+    "short_description": "Soft 100% combed organic cotton tee with non-toxic playful dinosaur print.",
+    "brand": "LittleAura Kids",
+    "sku": "SPS-KW-001",
+    "price": "799.00",
+    "discount_price": "499.00",
+    "discount_percentage": 38,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 14,
+    "thumbnail": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.019Z",
+    "updated_at": "2026-10-05T06:53:07.019Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 45,
+  "fields": {
+    "seller": 2,
+    "category": 43,
+    "subcategory": null,
+    "name": "Kids Denim Dungarees & Striped Tee 2-Piece Set",
+    "slug": "kids-denim-dungarees-striped-tee-set",
+    "description": "A classic weekend look for kids. Featuring soft-washed denim with adjustable metal buckle straps, deep front pockets for toys, and a matching jersey tee made from stretch cotton blend.",
+    "short_description": "Durable adjustable denim overalls paired with a breathable striped cotton t-shirt.",
+    "brand": "LittleAura Kids",
+    "sku": "SPS-KW-002",
+    "price": "1499.00",
+    "discount_price": "999.00",
+    "discount_percentage": 33,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.65",
+    "review_count": 9,
+    "thumbnail": "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.028Z",
+    "updated_at": "2026-10-05T06:53:07.029Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 46,
+  "fields": {
+    "seller": 2,
+    "category": 43,
+    "subcategory": null,
+    "name": "Girls Floral Tiered Summer Party Frock",
+    "slug": "girls-floral-tiered-summer-party-frock",
+    "description": "Perfect for birthday parties and family gatherings. Featuring a pastel floral print on lightweight chiffon with a soft 100% cotton inner lining, back button keyhole, and twirl-ready tiered flare.",
+    "short_description": "Charming tiered floral dress with breathable cotton lining and flutter sleeves.",
+    "brand": "LittleAura Kids",
+    "sku": "SPS-KW-003",
+    "price": "1299.00",
+    "discount_price": "799.00",
+    "discount_percentage": 38,
+    "stock_quantity": 40,
+    "minimum_order_quantity": 1,
+    "rating": "4.75",
+    "review_count": 12,
+    "thumbnail": "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.034Z",
+    "updated_at": "2026-10-05T06:53:07.034Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 47,
+  "fields": {
+    "seller": 2,
+    "category": 43,
+    "subcategory": null,
+    "name": "Boys Smart Casual Linen Collar Shirt & Shorts Set",
+    "slug": "boys-smart-linen-collar-shirt-shorts-set",
+    "description": "A dapper outfit for festivities and celebrations. Crafted from premium pre-washed linen-cotton blend that stays cool in warm weather. Includes wood-finish buttons and elasticated waistband with drawstring.",
+    "short_description": "Breathable linen-cotton Mandarin collar shirt with elastic waist chino shorts.",
+    "brand": "LittleAura Kids",
+    "sku": "SPS-KW-004",
+    "price": "1699.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 29,
+    "stock_quantity": 30,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 8,
+    "thumbnail": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.040Z",
+    "updated_at": "2026-10-05T06:53:07.040Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 48,
+  "fields": {
+    "seller": 2,
+    "category": 44,
+    "subcategory": null,
+    "name": "Women's Floral Print Pure Cotton Anarkali Kurti",
+    "slug": "womens-floral-print-pure-cotton-anarkali-kurti",
+    "description": "Embrace effortless elegance with this breathable pure cotton Anarkali kurti. Boasts a flattering flared silhouette, round neckline with delicate border piping, 3/4th sleeves, and subtle gotta patti detailing.",
+    "short_description": "Handcrafted pure cotton flared Anarkali kurti with intricate floral block print.",
+    "brand": "Aura Wear",
+    "sku": "SPS-WW-001",
+    "price": "2499.00",
+    "discount_price": "1299.00",
+    "discount_percentage": 48,
+    "stock_quantity": 60,
+    "minimum_order_quantity": 1,
+    "rating": "4.85",
+    "review_count": 28,
+    "thumbnail": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.045Z",
+    "updated_at": "2026-10-05T06:53:07.045Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 49,
+  "fields": {
+    "seller": 2,
+    "category": 44,
+    "subcategory": null,
+    "name": "Women's High-Waist Relaxed Wide-Leg Trousers",
+    "slug": "womens-high-waist-relaxed-wide-leg-trousers",
+    "description": "Elevate your daily wardrobe with these ultra-comfortable wide-leg trousers. Designed in a premium wrinkle-resistant rayon-blend with a clean high-waisted cut, slanted side pockets, and relaxed drape.",
+    "short_description": "Chic tailored wide-leg trousers with elastic back waistband and front pleats.",
+    "brand": "Aura Wear",
+    "sku": "SPS-WW-002",
+    "price": "1999.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 40,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 16,
+    "thumbnail": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.050Z",
+    "updated_at": "2026-10-05T06:53:07.050Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 50,
+  "fields": {
+    "seller": 2,
+    "category": 44,
+    "subcategory": null,
+    "name": "Women's Handcrafted Chanderi Silk Kurta Set with Dupatta",
+    "slug": "womens-handcrafted-chanderi-silk-kurta-set",
+    "description": "Woven with subtle metallic threads, this royal festive kurta set features delicate hand-embroidery along the placket, tonal straight trousers with scallop lace hems, and a sheer organza dupatta.",
+    "short_description": "3-piece regal Chanderi silk kurta, straight trousers, and organza zari dupatta.",
+    "brand": "Aura Wear",
+    "sku": "SPS-WW-003",
+    "price": "3999.00",
+    "discount_price": "2499.00",
+    "discount_percentage": 38,
+    "stock_quantity": 25,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 22,
+    "thumbnail": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.055Z",
+    "updated_at": "2026-10-05T06:53:07.055Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 51,
+  "fields": {
+    "seller": 2,
+    "category": 45,
+    "subcategory": null,
+    "name": "Royal Kanjeevaram Silk Woven Saree with Golden Zari Border",
+    "slug": "royal-kanjeevaram-silk-woven-saree-golden-zari",
+    "description": "Step into timeless royal splendor. Woven by master weavers with luminous jacquard motifs across the body and a heavy contrasting zari border. Comes with an unstitched 80cm blouse piece.",
+    "short_description": "Heirloom quality Kanjeevaram art silk saree with ornate floral golden zari pallu.",
+    "brand": "Virasat Silks",
+    "sku": "SPS-SAR-001",
+    "price": "6999.00",
+    "discount_price": "3499.00",
+    "discount_percentage": 50,
+    "stock_quantity": 30,
+    "minimum_order_quantity": 1,
+    "rating": "4.92",
+    "review_count": 45,
+    "thumbnail": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.061Z",
+    "updated_at": "2026-10-05T06:53:07.061Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 52,
+  "fields": {
+    "seller": 2,
+    "category": 45,
+    "subcategory": null,
+    "name": "Banarasi Georgette Handwoven Festive Saree",
+    "slug": "banarasi-georgette-handwoven-festive-saree",
+    "description": "Combining rich Banarasi heritage with the airy grace of georgette. Easy to drape and maintain, featuring dense floral butis all over and a regal contrast border.",
+    "short_description": "Lightweight flowy Banarasi georgette saree with intricate silver kadwa weave.",
+    "brand": "Virasat Silks",
+    "sku": "SPS-SAR-002",
+    "price": "4999.00",
+    "discount_price": "2799.00",
+    "discount_percentage": 44,
+    "stock_quantity": 28,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 19,
+    "thumbnail": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.063Z",
+    "updated_at": "2026-10-05T06:53:07.063Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 53,
+  "fields": {
+    "seller": 2,
+    "category": 45,
+    "subcategory": null,
+    "name": "Pure Chiffon Floral Printed Lightweight Casual Saree",
+    "slug": "pure-chiffon-floral-printed-casual-saree",
+    "description": "The ultimate everyday drape for office or festive brunches. Soft, featherweight chiffon with clean finished edges and an accompanying solid crepe blouse fabric.",
+    "short_description": "Feather-light printed chiffon saree in fresh watercolor botanical motifs.",
+    "brand": "Virasat Silks",
+    "sku": "SPS-SAR-003",
+    "price": "2299.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 48,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.68",
+    "review_count": 31,
+    "thumbnail": "https://images.unsplash.com/photo-1609357605129-26f69add5d6e?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.064Z",
+    "updated_at": "2026-10-05T06:53:07.064Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 54,
+  "fields": {
+    "seller": 2,
+    "category": 46,
+    "subcategory": null,
+    "name": "Elegance Fit & Flare French Midi Evening Dress",
+    "slug": "elegance-fit-flare-french-midi-evening-dress",
+    "description": "Flattering silhouette crafted from premium structured crepe. Features a sweetheart bustier neckline, discreet side zipper closure, elegant side slit, and graceful movement.",
+    "short_description": "Feminine sweetheart neckline midi dress with cinched waist and pleated skirt.",
+    "brand": "Moda Nova",
+    "sku": "SPS-DRS-001",
+    "price": "3299.00",
+    "discount_price": "1899.00",
+    "discount_percentage": 42,
+    "stock_quantity": 40,
+    "minimum_order_quantity": 1,
+    "rating": "4.78",
+    "review_count": 24,
+    "thumbnail": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.066Z",
+    "updated_at": "2026-10-05T06:53:07.066Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 55,
+  "fields": {
+    "seller": 2,
+    "category": 46,
+    "subcategory": null,
+    "name": "Bohemian Floral Print Maxi Wrap Summer Dress",
+    "slug": "bohemian-floral-print-maxi-wrap-summer-dress",
+    "description": "Breezy and flattering on all body types. Features an adjustable waist tie, V-neckline, cascading ruffle hemline, and breathable viscose fabric that stays cool all day.",
+    "short_description": "Flowing true wrap maxi dress with vibrant bohemian florals and ruffle hem.",
+    "brand": "Moda Nova",
+    "sku": "SPS-DRS-002",
+    "price": "2799.00",
+    "discount_price": "1499.00",
+    "discount_percentage": 46,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.72",
+    "review_count": 17,
+    "thumbnail": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.071Z",
+    "updated_at": "2026-10-05T06:53:07.071Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 56,
+  "fields": {
+    "seller": 2,
+    "category": 46,
+    "subcategory": null,
+    "name": "Classic Polka Dot A-Line Retro Casual Dress",
+    "slug": "classic-polka-dot-aline-retro-casual-dress",
+    "description": "A versatile retro staple made from stretch-infused breathable cotton. Features a boat neck, concealed back zipper, and matching tie-up belt to accentuate the waistline.",
+    "short_description": "Vintage-inspired polka dot skater dress with cap sleeves and tie belt.",
+    "brand": "Moda Nova",
+    "sku": "SPS-DRS-003",
+    "price": "1999.00",
+    "discount_price": "1099.00",
+    "discount_percentage": 45,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.60",
+    "review_count": 15,
+    "thumbnail": "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.077Z",
+    "updated_at": "2026-10-05T06:53:07.077Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 57,
+  "fields": {
+    "seller": 2,
+    "category": 47,
+    "subcategory": null,
+    "name": "Oversized Campus Graphic Drop-Shoulder Hoodie",
+    "slug": "oversized-campus-graphic-drop-shoulder-hoodie",
+    "description": "The quintessential college essential. Built with ultra-soft brushback cotton fleece, double-layer hood with thick drawstrings, roomy kangaroo pouch, and durable ribbed cuffs.",
+    "short_description": "Heavyweight 380 GSM fleece oversized hoodie with vintage varsity typographic print.",
+    "brand": "UrbanPulse",
+    "sku": "SPS-CW-001",
+    "price": "2299.00",
+    "discount_price": "1299.00",
+    "discount_percentage": 43,
+    "stock_quantity": 55,
+    "minimum_order_quantity": 1,
+    "rating": "4.82",
+    "review_count": 33,
+    "thumbnail": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.082Z",
+    "updated_at": "2026-10-05T06:53:07.082Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 58,
+  "fields": {
+    "seller": 2,
+    "category": 47,
+    "subcategory": null,
+    "name": "Classic Straight-Fit Distressed Denim Jeans",
+    "slug": "classic-straight-fit-distressed-denim-jeans",
+    "description": "Rugged vintage aesthetic meets everyday comfort. Built with heavy-duty brass rivets, authentic 5-pocket styling, and premium stonewashed indigo denim that ages gracefully.",
+    "short_description": "100% durable cotton authentic straight leg jeans with light distress wash.",
+    "brand": "UrbanPulse",
+    "sku": "SPS-CW-002",
+    "price": "2599.00",
+    "discount_price": "1499.00",
+    "discount_percentage": 42,
+    "stock_quantity": 40,
+    "minimum_order_quantity": 1,
+    "rating": "4.65",
+    "review_count": 21,
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.086Z",
+    "updated_at": "2026-10-05T06:53:07.086Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 59,
+  "fields": {
+    "seller": 2,
+    "category": 47,
+    "subcategory": null,
+    "name": "Minimalist Canvas Everyday Campus Backpack with Laptop Sleeve",
+    "slug": "minimalist-canvas-everyday-campus-backpack",
+    "description": "Spacious 24-litre campus daypack with ergonomic contoured shoulder straps, twin mesh water bottle holders, anti-theft back pocket, and reinforced bottom panel.",
+    "short_description": "Water-resistant high-density canvas daypack with padded 15.6\" laptop compartment.",
+    "brand": "UrbanPulse",
+    "sku": "SPS-CW-003",
+    "price": "1899.00",
+    "discount_price": "999.00",
+    "discount_percentage": 47,
+    "stock_quantity": 65,
+    "minimum_order_quantity": 1,
+    "rating": "4.74",
+    "review_count": 42,
+    "thumbnail": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.092Z",
+    "updated_at": "2026-10-05T06:53:07.092Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 60,
+  "fields": {
+    "seller": 2,
+    "category": 48,
+    "subcategory": null,
+    "name": "Glamour Sequin Embroidered Net Party Gown",
+    "slug": "glamour-sequin-embroidered-evening-gown",
+    "description": "Turn heads at every gala and cocktail evening. Features dazzling hand-embroidered ombre sequins on stretch illusion mesh, padded cups, plunging backline, and a sweeping mermaid flare.",
+    "short_description": "Showstopping floor-length evening gown encrusted with micro-shimmer sequins.",
+    "brand": "Luxe Royale",
+    "sku": "SPS-PW-001",
+    "price": "5499.00",
+    "discount_price": "2999.00",
+    "discount_percentage": 45,
+    "stock_quantity": 25,
+    "minimum_order_quantity": 1,
+    "rating": "4.88",
+    "review_count": 27,
+    "thumbnail": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.097Z",
+    "updated_at": "2026-10-05T06:53:07.097Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 61,
+  "fields": {
+    "seller": 2,
+    "category": 48,
+    "subcategory": null,
+    "name": "Men's Premium Velvet Tuxedo Blazer with Satin Lapel",
+    "slug": "mens-premium-velvet-tuxedo-blazer",
+    "description": "The definitive statement piece for formal parties and receptions. Crafted with rich pile velvet, satin-covered single button, dual besom pockets, and silky jacquard inner lining.",
+    "short_description": "Midnight plush micro-velvet single-breasted blazer with contrasting satin lapels.",
+    "brand": "Luxe Royale",
+    "sku": "SPS-PW-002",
+    "price": "5999.00",
+    "discount_price": "3499.00",
+    "discount_percentage": 42,
+    "stock_quantity": 30,
+    "minimum_order_quantity": 1,
+    "rating": "4.80",
+    "review_count": 18,
+    "thumbnail": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.102Z",
+    "updated_at": "2026-10-05T06:53:07.102Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 62,
+  "fields": {
+    "seller": 2,
+    "category": 49,
+    "subcategory": null,
+    "name": "Men's Tailored Slim-Fit Non-Iron Oxford Formal Shirt",
+    "slug": "mens-tailored-slimfit-noniron-oxford-formal-shirt",
+    "description": "Look impeccable from 9 to 5. Engineered with crease-resistant non-iron technology and natural stretch. Features mother-of-pearl finish buttons and reinforced collar stays.",
+    "short_description": "100% 2-ply long-staple cotton non-iron shirt with spread collar and French placket.",
+    "brand": "Executive Edge",
+    "sku": "SPS-OW-001",
+    "price": "1999.00",
+    "discount_price": "1199.00",
+    "discount_percentage": 40,
+    "stock_quantity": 70,
+    "minimum_order_quantity": 1,
+    "rating": "4.82",
+    "review_count": 54,
+    "thumbnail": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.107Z",
+    "updated_at": "2026-10-05T06:53:07.107Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 63,
+  "fields": {
+    "seller": 2,
+    "category": 49,
+    "subcategory": null,
+    "name": "Women's Structured Double-Breasted Power Blazer",
+    "slug": "womens-structured-double-breasted-power-blazer",
+    "description": "Expertly sculpted shoulders with clean peak lapels and tortoiseshell buttons. Fabricated in a mid-weight stretch twill that maintains sharp drape throughout long workdays.",
+    "short_description": "Command the boardroom in this sharply tailored double-breasted suit blazer.",
+    "brand": "Executive Edge",
+    "sku": "SPS-OW-002",
+    "price": "3499.00",
+    "discount_price": "2199.00",
+    "discount_percentage": 37,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.86",
+    "review_count": 31,
+    "thumbnail": "https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.112Z",
+    "updated_at": "2026-10-05T06:53:07.112Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 64,
+  "fields": {
+    "seller": 2,
+    "category": 50,
+    "subcategory": null,
+    "name": "Classic Analog Chronograph Watch with Genuine Leather Strap",
+    "slug": "classic-analog-chronograph-watch-leather-strap",
+    "description": "Timeless design with modern precision. Stainless steel 42mm case with mineral crystal glass, date window, tachymeter scale, and genuine Italian full-grain leather band.",
+    "short_description": "Japanese quartz multi-dial chronograph watch with 5 ATM water resistance.",
+    "brand": "Titan Edge",
+    "sku": "SPS-ACC-001",
+    "price": "4499.00",
+    "discount_price": "2499.00",
+    "discount_percentage": 44,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.85",
+    "review_count": 49,
+    "thumbnail": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.117Z",
+    "updated_at": "2026-10-05T06:53:07.117Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 65,
+  "fields": {
+    "seller": 2,
+    "category": 50,
+    "subcategory": null,
+    "name": "Polarized UV400 Aviator Metal Sunglasses",
+    "slug": "polarized-uv400-aviator-metal-sunglasses",
+    "description": "Complete eye protection with 100% UV400 filtering. Features flexible spring hinges, soft silicone adjustable nose pads, and shatterproof scratch-resistant lenses.",
+    "short_description": "Glare-blocking polarized triacetate lenses with ultralight titanium-alloy frame.",
+    "brand": "Titan Edge",
+    "sku": "SPS-ACC-002",
+    "price": "1999.00",
+    "discount_price": "999.00",
+    "discount_percentage": 50,
+    "stock_quantity": 60,
+    "minimum_order_quantity": 1,
+    "rating": "4.70",
+    "review_count": 38,
+    "thumbnail": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.119Z",
+    "updated_at": "2026-10-05T06:53:07.119Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 66,
+  "fields": {
+    "seller": 2,
+    "category": 50,
+    "subcategory": null,
+    "name": "Structured Vegan Leather Shoulder Tote Handbag",
+    "slug": "structured-vegan-leather-shoulder-tote-handbag",
+    "description": "Polished and functional everyday companion. Features top-zip main compartment, interior padded tablet pocket, gold-tone hardware accents, and sturdy reinforced dual handles.",
+    "short_description": "Spacious multi-compartment premium pebble-grain vegan leather tote.",
+    "brand": "Aura Wear",
+    "sku": "SPS-ACC-003",
+    "price": "2999.00",
+    "discount_price": "1699.00",
+    "discount_percentage": 43,
+    "stock_quantity": 50,
+    "minimum_order_quantity": 1,
+    "rating": "4.76",
+    "review_count": 29,
+    "thumbnail": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.120Z",
+    "updated_at": "2026-10-05T06:53:07.120Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 67,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": null,
+    "name": "Wireless Bluetooth Noise Cancelling Headphones",
+    "slug": "wireless-bluetooth-noise-cancelling-headphones",
+    "description": "Experience theater-grade sound with the AeroGlide ANC headphones. Equipped with custom tuned 40mm neodymium drivers, spatial audio algorithms, and plush memory foam ear cushions for all-day comfort. Features fast USB-C charging giving 5 hours of playback in 10 minutes.",
+    "short_description": "40dB Hybrid Active Noise Cancellation with 50-hour ultra battery life.",
+    "brand": "SoundWave Pro",
+    "sku": "SPS-EL-001",
+    "price": "4999.00",
+    "discount_price": "2499.00",
+    "discount_percentage": 50,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.88",
+    "review_count": 64,
+    "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.122Z",
+    "updated_at": "2026-10-05T06:53:07.122Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 68,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": null,
+    "name": "Vanguard Ultra Slim 15.6\" Gaming Laptop",
+    "slug": "vanguard-ultra-slim-156-gaming-laptop",
+    "description": "Unleash elite gaming and creative performance. Packed with a 165Hz QHD IPS anti-glare display, dual-fan vapor chamber cooling, per-key RGB backlit keyboard, and lightweight aerospace-grade aluminum chassis.",
+    "short_description": "Intel Core i7 13th Gen, 16GB DDR5, 1TB NVMe SSD, RTX 4060 8GB Graphics.",
+    "brand": "Vanguard Tech",
+    "sku": "SPS-EL-002",
+    "price": "59999.00",
+    "discount_price": "47999.00",
+    "discount_percentage": 20,
+    "stock_quantity": 18,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 22,
+    "thumbnail": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.124Z",
+    "updated_at": "2026-10-05T06:53:07.124Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 69,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": null,
+    "name": "Nova 5G Pro Flagship Smartphone",
+    "slug": "nova-5g-pro-flagship-smartphone",
+    "description": "Captivating design engineered for photography enthusiasts and power multitaskers. Features Snapdragon 8-series processor, 5000mAh all-day battery, stereo Dolby Atmos speakers, and Corning Gorilla Glass Victus.",
+    "short_description": "108MP OIS Studio Camera, 120Hz Curved AMOLED, 67W Super Fast Charging.",
+    "brand": "Nova Mobile",
+    "sku": "SPS-EL-003",
+    "price": "29999.00",
+    "discount_price": "22999.00",
+    "discount_percentage": 23,
+    "stock_quantity": 35,
+    "minimum_order_quantity": 1,
+    "rating": "4.82",
+    "review_count": 41,
+    "thumbnail": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": false,
+    "created_at": "2026-10-05T06:53:07.126Z",
+    "updated_at": "2026-10-05T06:53:07.126Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 70,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": null,
+    "name": "Titan Edge OLED Fitness Smart Watch",
+    "slug": "titan-edge-oled-fitness-smart-watch",
+    "description": "Your comprehensive wellness partner on your wrist. Continuous SpO2 and heart-rate monitoring, AI sleep scoring, IP68 water resistance, and up to 10 days of battery on a single magnetic charge.",
+    "short_description": "1.96\" Ultra AMOLED Display, Bluetooth Calling, 110+ Sports Modes.",
+    "brand": "Titan Tech",
+    "sku": "SPS-EL-004",
+    "price": "4499.00",
+    "discount_price": "1999.00",
+    "discount_percentage": 56,
+    "stock_quantity": 120,
+    "minimum_order_quantity": 1,
+    "rating": "4.74",
+    "review_count": 56,
+    "thumbnail": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.127Z",
+    "updated_at": "2026-10-05T06:53:07.127Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 71,
+  "fields": {
+    "seller": 2,
+    "category": 5,
+    "subcategory": null,
+    "name": "BoomBlast Portable Waterproof Bluetooth Speaker",
+    "slug": "boomblast-portable-waterproof-bluetooth-speaker",
+    "description": "Take the festival anywhere. Engineered with dual passive radiators for deep resonant bass, rugged rubberized armor shock protection, TWS stereo pairing mode, and hands-free microphone calls.",
+    "short_description": "24W Punchy Bass, IPX7 Waterproof, 20-Hour Playtime with RGB Lights.",
+    "brand": "SoundWave Pro",
+    "sku": "SPS-EL-005",
+    "price": "3499.00",
+    "discount_price": "1699.00",
+    "discount_percentage": 51,
+    "stock_quantity": 65,
+    "minimum_order_quantity": 1,
+    "rating": "4.68",
+    "review_count": 37,
+    "thumbnail": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.129Z",
+    "updated_at": "2026-10-05T06:53:07.129Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 72,
+  "fields": {
+    "seller": 2,
+    "category": 17,
+    "subcategory": null,
+    "name": "Men's CloudStride Cushion Engineered Running Shoes",
+    "slug": "mens-cloudstride-running-shoes",
+    "description": "Experience cloud-like shock absorption during sprints and daily walks. Features breathable zoned mesh knit, anti-slip carbon rubber outsole pods, and orthotic arch support insole.",
+    "short_description": "Engineered air-mesh upper with high-rebound EVA responsive midsole.",
+    "brand": "Apex Athletics",
+    "sku": "SPS-FW-001",
+    "price": "3499.00",
+    "discount_price": "1799.00",
+    "discount_percentage": 49,
+    "stock_quantity": 80,
+    "minimum_order_quantity": 1,
+    "rating": "4.84",
+    "review_count": 52,
+    "thumbnail": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.131Z",
+    "updated_at": "2026-10-05T06:53:07.131Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 73,
+  "fields": {
+    "seller": 2,
+    "category": 9,
+    "subcategory": null,
+    "name": "Barista Touch Espresso & Filter Coffee Maker Machine",
+    "slug": "barista-touch-espresso-coffee-maker-machine",
+    "description": "Brew cafe-quality lattes, cappuccinos, and rich crema espressos at home. Featuring Thermo-Block rapid heating system, dual-wall crema filters, removable 1.5L water tank, and cup warming plate.",
+    "short_description": "15-Bar Italian high pressure pump with stainless steel milk steam frother wand.",
+    "brand": "Culina Master",
+    "sku": "SPS-HK-001",
+    "price": "8999.00",
+    "discount_price": "5499.00",
+    "discount_percentage": 39,
+    "stock_quantity": 25,
+    "minimum_order_quantity": 1,
+    "rating": "4.90",
+    "review_count": 34,
+    "thumbnail": "https://images.unsplash.com/photo-1517668808822-9ebd02f2a888?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.144Z",
+    "updated_at": "2026-10-05T06:53:07.144Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 74,
+  "fields": {
+    "seller": 2,
+    "category": 13,
+    "subcategory": null,
+    "name": "Signature Artisanal Eau De Parfum Luxury Fragrance 100ml",
+    "slug": "signature-artisanal-eau-de-parfum-luxury-fragrance",
+    "description": "A long-lasting artisanal perfume formulated with concentrated natural essential oils. Features top notes of bergamot and pink pepper, heart notes of rose and amber, settling into a warm sandalwood finish.",
+    "short_description": "Sensual blend of Calabrian bergamot, Turkish rose, and rich Madagascar vanilla.",
+    "brand": "GlowEssence Botanicals",
+    "sku": "SPS-BE-001",
+    "price": "2999.00",
+    "discount_price": "1499.00",
+    "discount_percentage": 50,
+    "stock_quantity": 45,
+    "minimum_order_quantity": 1,
+    "rating": "4.88",
+    "review_count": 47,
+    "thumbnail": "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": true,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.146Z",
+    "updated_at": "2026-10-05T06:53:07.146Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 75,
+  "fields": {
+    "seller": 2,
+    "category": 25,
+    "subcategory": null,
+    "name": "ProFlex Non-Slip Dual Layer Eco TPE Yoga Mat (6mm)",
+    "slug": "proflex-nonslip-dual-layer-eco-tpe-yoga-mat",
+    "description": "Eco-friendly certified non-toxic TPE material with textured grip surface on both sides. Provides superior joint cushioning, sweat resistance, and includes a convenient free carrying strap.",
+    "short_description": "High-density 6mm cushioned anti-tear yoga mat with laser-engraved alignment lines.",
+    "brand": "Zenith Gear",
+    "sku": "SPS-SF-001",
+    "price": "1799.00",
+    "discount_price": "999.00",
+    "discount_percentage": 44,
+    "stock_quantity": 75,
+    "minimum_order_quantity": 1,
+    "rating": "4.78",
+    "review_count": 36,
+    "thumbnail": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?auto=format&fit=crop&w=800&q=80",
+    "is_active": true,
+    "is_featured": false,
+    "is_best_seller": true,
+    "created_at": "2026-10-05T06:53:07.148Z",
+    "updated_at": "2026-10-05T06:53:07.148Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 123,
+  "fields": {
+    "product": 1,
+    "image": "products/gallery/wireless-bluetooth-headphones.jpg",
+    "alt_text": "Wireless Bluetooth Noise Cancelling Headphones view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.248Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 124,
+  "fields": {
+    "product": 1,
+    "image": "products/gallery/wireless-bluetooth-headphones-2.jpg",
+    "alt_text": "Wireless Bluetooth Noise Cancelling Headphones view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.254Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 125,
+  "fields": {
+    "product": 1,
+    "image": "products/gallery/wireless-bluetooth-headphones-3.jpg",
+    "alt_text": "Wireless Bluetooth Noise Cancelling Headphones view 3",
+    "is_primary": false,
+    "order": 3,
+    "created_at": "2026-09-30T04:34:50.259Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 126,
+  "fields": {
+    "product": 2,
+    "image": "products/gallery/gaming-laptop.jpg",
+    "alt_text": "Vanguard Ultra Slim 15.6\" Gaming Laptop view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.298Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 127,
+  "fields": {
+    "product": 2,
+    "image": "products/gallery/gaming-laptop-2.jpg",
+    "alt_text": "Vanguard Ultra Slim 15.6\" Gaming Laptop view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.303Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 128,
+  "fields": {
+    "product": 2,
+    "image": "products/gallery/gaming-laptop-3.jpg",
+    "alt_text": "Vanguard Ultra Slim 15.6\" Gaming Laptop view 3",
+    "is_primary": false,
+    "order": 3,
+    "created_at": "2026-09-30T04:34:50.307Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 129,
+  "fields": {
+    "product": 3,
+    "image": "products/gallery/smartphone.jpg",
+    "alt_text": "Nova 5G Pro Flagship Smartphone view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.342Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 130,
+  "fields": {
+    "product": 3,
+    "image": "products/gallery/smartphone-2.jpg",
+    "alt_text": "Nova 5G Pro Flagship Smartphone view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.347Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 131,
+  "fields": {
+    "product": 3,
+    "image": "products/gallery/smartphone-3.jpg",
+    "alt_text": "Nova 5G Pro Flagship Smartphone view 3",
+    "is_primary": false,
+    "order": 3,
+    "created_at": "2026-09-30T04:34:50.353Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 132,
+  "fields": {
+    "product": 4,
+    "image": "products/gallery/smart-watch.jpg",
+    "alt_text": "Titan Edge OLED Fitness Smart Watch view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.385Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 133,
+  "fields": {
+    "product": 4,
+    "image": "products/gallery/smart-watch-2.jpg",
+    "alt_text": "Titan Edge OLED Fitness Smart Watch view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.389Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 134,
+  "fields": {
+    "product": 4,
+    "image": "products/gallery/smart-watch-3.jpg",
+    "alt_text": "Titan Edge OLED Fitness Smart Watch view 3",
+    "is_primary": false,
+    "order": 3,
+    "created_at": "2026-09-30T04:34:50.393Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 135,
+  "fields": {
+    "product": 5,
+    "image": "products/gallery/bluetooth-speaker.jpg",
+    "alt_text": "BoomBlast Portable Waterproof Bluetooth Speaker view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.422Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 136,
+  "fields": {
+    "product": 5,
+    "image": "products/gallery/bluetooth-speaker-2.jpg",
+    "alt_text": "BoomBlast Portable Waterproof Bluetooth Speaker view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.426Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 137,
+  "fields": {
+    "product": 6,
+    "image": "products/gallery/wireless-mouse.jpg",
+    "alt_text": "ErgoGrip Wireless Optical Mouse view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.455Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 138,
+  "fields": {
+    "product": 6,
+    "image": "products/gallery/wireless-mouse-2.jpg",
+    "alt_text": "ErgoGrip Wireless Optical Mouse view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.459Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 139,
+  "fields": {
+    "product": 7,
+    "image": "products/gallery/mechanical-keyboard.jpg",
+    "alt_text": "RGB Backlit Mechanical Gaming Keyboard view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.524Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 140,
+  "fields": {
+    "product": 7,
+    "image": "products/gallery/mechanical-keyboard-2.jpg",
+    "alt_text": "RGB Backlit Mechanical Gaming Keyboard view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.534Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 141,
+  "fields": {
+    "product": 8,
+    "image": "products/gallery/tablet.jpg",
+    "alt_text": "Zenith Tab 11\" 2K IPS Tablet with Stylus view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.578Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 142,
+  "fields": {
+    "product": 9,
+    "image": "products/gallery/power-bank.jpg",
+    "alt_text": "PowerCore 20000mAh 22.5W Fast Charge Power Bank view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.617Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 143,
+  "fields": {
+    "product": 10,
+    "image": "products/gallery/usb-c-charger.jpg",
+    "alt_text": "65W GaN Dual Port USB-C Fast Wall Charger view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.661Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 144,
+  "fields": {
+    "product": 11,
+    "image": "products/gallery/mens-casual-shirt.jpg",
+    "alt_text": "Men's Premium 100% Breathable Cotton Casual Shirt view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.680Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 145,
+  "fields": {
+    "product": 11,
+    "image": "products/gallery/mens-casual-shirt-2.jpg",
+    "alt_text": "Men's Premium 100% Breathable Cotton Casual Shirt view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.688Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 146,
+  "fields": {
+    "product": 12,
+    "image": "products/gallery/mens-running-shoes.jpg",
+    "alt_text": "Men's CloudStride Cushion Engineered Running Shoes view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.728Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 147,
+  "fields": {
+    "product": 12,
+    "image": "products/gallery/mens-running-shoes-2.jpg",
+    "alt_text": "Men's CloudStride Cushion Engineered Running Shoes view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.733Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 148,
+  "fields": {
+    "product": 12,
+    "image": "products/gallery/mens-running-shoes-3.jpg",
+    "alt_text": "Men's CloudStride Cushion Engineered Running Shoes view 3",
+    "is_primary": false,
+    "order": 3,
+    "created_at": "2026-09-30T04:34:50.738Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 149,
+  "fields": {
+    "product": 13,
+    "image": "products/gallery/womens-kurti.jpg",
+    "alt_text": "Women's Royal Embroidered Anarkali Cotton Kurti view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.776Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 150,
+  "fields": {
+    "product": 13,
+    "image": "products/gallery/womens-kurti-2.jpg",
+    "alt_text": "Women's Royal Embroidered Anarkali Cotton Kurti view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.781Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 151,
+  "fields": {
+    "product": 14,
+    "image": "products/gallery/womens-saree.jpg",
+    "alt_text": "Women's Handwoven Kanjeevaram Silk Saree with Blouse Piece view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.822Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 152,
+  "fields": {
+    "product": 14,
+    "image": "products/gallery/womens-saree-2.jpg",
+    "alt_text": "Women's Handwoven Kanjeevaram Silk Saree with Blouse Piece view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.826Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 153,
+  "fields": {
+    "product": 15,
+    "image": "products/gallery/womens-handbag.jpg",
+    "alt_text": "Women's Structured Vegan Leather Shoulder Handbag view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.843Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 154,
+  "fields": {
+    "product": 15,
+    "image": "products/gallery/womens-handbag-2.jpg",
+    "alt_text": "Women's Structured Vegan Leather Shoulder Handbag view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:50.847Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 155,
+  "fields": {
+    "product": 16,
+    "image": "products/gallery/mens-jeans.jpg",
+    "alt_text": "Men's Classic Slim-Fit Stretch Denim Jeans view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.884Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 156,
+  "fields": {
+    "product": 17,
+    "image": "products/gallery/kids-tshirt.jpg",
+    "alt_text": "Kids Organic Cotton Play Graphic T-Shirt view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.925Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 157,
+  "fields": {
+    "product": 18,
+    "image": "products/gallery/womens-sneakers.jpg",
+    "alt_text": "Women's Minimalist White Platform Casual Sneakers view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:50.958Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 158,
+  "fields": {
+    "product": 19,
+    "image": "products/gallery/coffee-maker.jpg",
+    "alt_text": "Barista Touch Espresso & Filter Coffee Maker Machine view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.004Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 159,
+  "fields": {
+    "product": 19,
+    "image": "products/gallery/coffee-maker-2.jpg",
+    "alt_text": "Barista Touch Espresso & Filter Coffee Maker Machine view 2",
+    "is_primary": false,
+    "order": 2,
+    "created_at": "2026-09-30T04:34:51.008Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 160,
+  "fields": {
+    "product": 20,
+    "image": "products/gallery/electric-kettle.jpg",
+    "alt_text": "Stainless Steel 1.8L Rapid Boil Electric Kettle view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.026Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 161,
+  "fields": {
+    "product": 21,
+    "image": "products/gallery/cookware-set.jpg",
+    "alt_text": "5-Piece Granite Non-Stick Induction Cookware Set view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.042Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 162,
+  "fields": {
+    "product": 22,
+    "image": "products/gallery/mixer-grinder.jpg",
+    "alt_text": "750W Heavy Duty Multi-Jar Mixer Grinder view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.080Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 163,
+  "fields": {
+    "product": 23,
+    "image": "products/gallery/water-bottle.jpg",
+    "alt_text": "Vacuum Insulated Stainless Steel Water Bottle 1000ml view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.103Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 164,
+  "fields": {
+    "product": 24,
+    "image": "products/gallery/table-lamp.jpg",
+    "alt_text": "Modern Nordic Ceramic Bedside Table Lamp view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.135Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 165,
+  "fields": {
+    "product": 25,
+    "image": "products/gallery/bedsheet-set.jpg",
+    "alt_text": "400 Thread Count Pure Egyptian Cotton King Bedsheet Set view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.151Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 166,
+  "fields": {
+    "product": 26,
+    "image": "products/gallery/face-wash.jpg",
+    "alt_text": "Vitamin C Brightening Foaming Face Wash with Brush 150ml view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.196Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 167,
+  "fields": {
+    "product": 27,
+    "image": "products/gallery/moisturizer.jpg",
+    "alt_text": "Hyaluronic Acid 72-Hour Intense Moisture Gel Cream 50g view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.217Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 168,
+  "fields": {
+    "product": 28,
+    "image": "products/gallery/shampoo.jpg",
+    "alt_text": "Moroccan Argan Oil Anti-Frizz Restoring Shampoo 300ml view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.233Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 169,
+  "fields": {
+    "product": 29,
+    "image": "products/gallery/lipstick.jpg",
+    "alt_text": "Velvet Matte Longwear Transfer-Proof Lipstick 3.8g view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.249Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 170,
+  "fields": {
+    "product": 30,
+    "image": "products/gallery/sunscreen.jpg",
+    "alt_text": "Ultra Light Invisible Gel Sunscreen SPF 50+ PA++++ 50g view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.282Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 171,
+  "fields": {
+    "product": 31,
+    "image": "products/gallery/perfume.jpg",
+    "alt_text": "Signature Artisanal Eau De Parfum Luxury Fragrance 100ml view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.300Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 172,
+  "fields": {
+    "product": 32,
+    "image": "products/gallery/cricket-bat.jpg",
+    "alt_text": "ProStrike Grade-1 English Willow Cricket Bat view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.315Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 173,
+  "fields": {
+    "product": 33,
+    "image": "products/gallery/football.jpg",
+    "alt_text": "FIFA-Standard Thermally Bonded Match Football (Size 5) view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.331Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 174,
+  "fields": {
+    "product": 34,
+    "image": "products/gallery/badminton-racket.jpg",
+    "alt_text": "Carbon Fiber High-Tension Badminton Racket Dual Set view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.346Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 175,
+  "fields": {
+    "product": 35,
+    "image": "products/gallery/yoga-mat.jpg",
+    "alt_text": "ProFlex Non-Slip Dual Layer Eco TPE Yoga Mat (6mm) view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.362Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 176,
+  "fields": {
+    "product": 36,
+    "image": "products/gallery/basmati-rice.jpg",
+    "alt_text": "Royal Selection Aged Extra Long Basmati Rice 5kg view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.397Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 177,
+  "fields": {
+    "product": 37,
+    "image": "products/gallery/cooking-oil.jpg",
+    "alt_text": "Cold Pressed Pure Virgin Cooking Oil 1 Litre view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.412Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 178,
+  "fields": {
+    "product": 38,
+    "image": "products/gallery/green-tea.jpg",
+    "alt_text": "Whole Leaf Darjeeling Organic Green Tea Tin 250g view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.430Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 179,
+  "fields": {
+    "product": 39,
+    "image": "products/gallery/dry-fruits.jpg",
+    "alt_text": "California Jumbo Roasted Almonds & Cashews Mix 500g view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.448Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 180,
+  "fields": {
+    "product": 40,
+    "image": "products/gallery/rc-car.jpg",
+    "alt_text": "4WD High-Speed Off-Road Monster Remote Control Car view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.493Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 181,
+  "fields": {
+    "product": 41,
+    "image": "products/gallery/building-blocks.jpg",
+    "alt_text": "500-Piece Creative Architecture Building Blocks Set view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.514Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 182,
+  "fields": {
+    "product": 42,
+    "image": "products/gallery/teddy-bear.jpg",
+    "alt_text": "Giant Ultra Soft Cuddly Plush Teddy Bear 3 Feet view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.532Z"
+  }
+},
+{
+  "model": "products.productimage",
+  "pk": 183,
+  "fields": {
+    "product": 43,
+    "image": "products/gallery/board-game.jpg",
+    "alt_text": "Deluxe Handcrafted Wooden Chess & Board Game Set view 1",
+    "is_primary": true,
+    "order": 1,
+    "created_at": "2026-09-30T04:34:51.554Z"
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 106,
+  "fields": {
+    "product": 1,
+    "variant_type": "Color",
+    "name": "Midnight Black",
+    "sku": "SPS-SKU-0001-MID",
+    "price_adjustment": "0.00",
+    "stock_quantity": 25,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 107,
+  "fields": {
+    "product": 1,
+    "variant_type": "Color",
+    "name": "Lunar Silver",
+    "sku": "SPS-SKU-0001-LUN",
+    "price_adjustment": "200.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 108,
+  "fields": {
+    "product": 2,
+    "variant_type": "Storage",
+    "name": "512GB SSD",
+    "sku": "SPS-SKU-0002-512",
+    "price_adjustment": "0.00",
+    "stock_quantity": 10,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 109,
+  "fields": {
+    "product": 2,
+    "variant_type": "Storage",
+    "name": "1TB NVMe",
+    "sku": "SPS-SKU-0002-1TB",
+    "price_adjustment": "4000.00",
+    "stock_quantity": 8,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 110,
+  "fields": {
+    "product": 3,
+    "variant_type": "RAM",
+    "name": "8GB + 128GB",
+    "sku": "SPS-SKU-0003-8GB",
+    "price_adjustment": "0.00",
+    "stock_quantity": 16,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 111,
+  "fields": {
+    "product": 3,
+    "variant_type": "RAM",
+    "name": "12GB + 256GB",
+    "sku": "SPS-SKU-0003-12G",
+    "price_adjustment": "3000.00",
+    "stock_quantity": 16,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 112,
+  "fields": {
+    "product": 4,
+    "variant_type": "Color",
+    "name": "Obsidian Black",
+    "sku": "SPS-SKU-0004-OBS",
+    "price_adjustment": "0.00",
+    "stock_quantity": 30,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 113,
+  "fields": {
+    "product": 4,
+    "variant_type": "Color",
+    "name": "Titanium Grey",
+    "sku": "SPS-SKU-0004-TIT",
+    "price_adjustment": "100.00",
+    "stock_quantity": 30,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 114,
+  "fields": {
+    "product": 5,
+    "variant_type": "Color",
+    "name": "Stealth Black",
+    "sku": "SPS-SKU-0005-STE",
+    "price_adjustment": "0.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 115,
+  "fields": {
+    "product": 5,
+    "variant_type": "Color",
+    "name": "Navy Blue",
+    "sku": "SPS-SKU-0005-NAV",
+    "price_adjustment": "0.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 116,
+  "fields": {
+    "product": 6,
+    "variant_type": "Color",
+    "name": "Matte Black",
+    "sku": "SPS-SKU-0006-MAT",
+    "price_adjustment": "0.00",
+    "stock_quantity": 35,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 117,
+  "fields": {
+    "product": 6,
+    "variant_type": "Color",
+    "name": "Off White",
+    "sku": "SPS-SKU-0006-OFF",
+    "price_adjustment": "50.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 118,
+  "fields": {
+    "product": 7,
+    "variant_type": "Color",
+    "name": "Tactile Blue Switch",
+    "sku": "SPS-SKU-0007-TAC",
+    "price_adjustment": "0.00",
+    "stock_quantity": 14,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 119,
+  "fields": {
+    "product": 7,
+    "variant_type": "Color",
+    "name": "Linear Red Switch",
+    "sku": "SPS-SKU-0007-LIN",
+    "price_adjustment": "100.00",
+    "stock_quantity": 14,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 120,
+  "fields": {
+    "product": 8,
+    "variant_type": "Storage",
+    "name": "128GB WiFi",
+    "sku": "SPS-SKU-0008-128",
+    "price_adjustment": "0.00",
+    "stock_quantity": 12,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 121,
+  "fields": {
+    "product": 8,
+    "variant_type": "Storage",
+    "name": "256GB LTE",
+    "sku": "SPS-SKU-0008-256",
+    "price_adjustment": "4000.00",
+    "stock_quantity": 10,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 122,
+  "fields": {
+    "product": 9,
+    "variant_type": "Color",
+    "name": "Carbon Black",
+    "sku": "SPS-SKU-0009-CAR",
+    "price_adjustment": "0.00",
+    "stock_quantity": 40,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 123,
+  "fields": {
+    "product": 9,
+    "variant_type": "Color",
+    "name": "Polar White",
+    "sku": "SPS-SKU-0009-POL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 30,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 124,
+  "fields": {
+    "product": 11,
+    "variant_type": "Size",
+    "name": "M (38)",
+    "sku": "SPS-SKU-0011-M (",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 125,
+  "fields": {
+    "product": 11,
+    "variant_type": "Size",
+    "name": "L (40)",
+    "sku": "SPS-SKU-0011-L (",
+    "price_adjustment": "0.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 126,
+  "fields": {
+    "product": 11,
+    "variant_type": "Size",
+    "name": "XL (42)",
+    "sku": "SPS-SKU-0011-XL ",
+    "price_adjustment": "50.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 127,
+  "fields": {
+    "product": 12,
+    "variant_type": "Size",
+    "name": "UK 8",
+    "sku": "SPS-SKU-0012-UK ",
+    "price_adjustment": "0.00",
+    "stock_quantity": 12,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 128,
+  "fields": {
+    "product": 12,
+    "variant_type": "Size",
+    "name": "UK 9",
+    "sku": "SPS-SKU-0012-UK ",
+    "price_adjustment": "0.00",
+    "stock_quantity": 16,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 129,
+  "fields": {
+    "product": 12,
+    "variant_type": "Size",
+    "name": "UK 10",
+    "sku": "SPS-SKU-0012-UK ",
+    "price_adjustment": "0.00",
+    "stock_quantity": 12,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 130,
+  "fields": {
+    "product": 13,
+    "variant_type": "Size",
+    "name": "S (36)",
+    "sku": "SPS-SKU-0013-S (",
+    "price_adjustment": "0.00",
+    "stock_quantity": 10,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 131,
+  "fields": {
+    "product": 13,
+    "variant_type": "Size",
+    "name": "M (38)",
+    "sku": "SPS-SKU-0013-M (",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 132,
+  "fields": {
+    "product": 13,
+    "variant_type": "Size",
+    "name": "L (40)",
+    "sku": "SPS-SKU-0013-L (",
+    "price_adjustment": "0.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 133,
+  "fields": {
+    "product": 15,
+    "variant_type": "Color",
+    "name": "Rich Tan Brown",
+    "sku": "SPS-SKU-0015-RIC",
+    "price_adjustment": "0.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 134,
+  "fields": {
+    "product": 15,
+    "variant_type": "Color",
+    "name": "Classic Onyx Black",
+    "sku": "SPS-SKU-0015-CLA",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 135,
+  "fields": {
+    "product": 16,
+    "variant_type": "Size",
+    "name": "32 Waist",
+    "sku": "SPS-SKU-0016-32 ",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 136,
+  "fields": {
+    "product": 16,
+    "variant_type": "Size",
+    "name": "34 Waist",
+    "sku": "SPS-SKU-0016-34 ",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 137,
+  "fields": {
+    "product": 16,
+    "variant_type": "Size",
+    "name": "36 Waist",
+    "sku": "SPS-SKU-0016-36 ",
+    "price_adjustment": "50.00",
+    "stock_quantity": 10,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 138,
+  "fields": {
+    "product": 17,
+    "variant_type": "Size",
+    "name": "4-5 Years",
+    "sku": "SPS-SKU-0017-4-5",
+    "price_adjustment": "0.00",
+    "stock_quantity": 25,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 139,
+  "fields": {
+    "product": 17,
+    "variant_type": "Size",
+    "name": "6-7 Years",
+    "sku": "SPS-SKU-0017-6-7",
+    "price_adjustment": "0.00",
+    "stock_quantity": 25,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 140,
+  "fields": {
+    "product": 18,
+    "variant_type": "Size",
+    "name": "UK 5",
+    "sku": "SPS-SKU-0018-UK ",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 141,
+  "fields": {
+    "product": 18,
+    "variant_type": "Size",
+    "name": "UK 6",
+    "sku": "SPS-SKU-0018-UK ",
+    "price_adjustment": "0.00",
+    "stock_quantity": 20,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 142,
+  "fields": {
+    "product": 23,
+    "variant_type": "Color",
+    "name": "Matte Midnight",
+    "sku": "SPS-SKU-0023-MAT",
+    "price_adjustment": "0.00",
+    "stock_quantity": 35,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 143,
+  "fields": {
+    "product": 23,
+    "variant_type": "Color",
+    "name": "Emerald Forest",
+    "sku": "SPS-SKU-0023-EME",
+    "price_adjustment": "0.00",
+    "stock_quantity": 35,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 144,
+  "fields": {
+    "product": 25,
+    "variant_type": "Color",
+    "name": "Crisp Snow White",
+    "sku": "SPS-SKU-0025-CRI",
+    "price_adjustment": "0.00",
+    "stock_quantity": 18,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 145,
+  "fields": {
+    "product": 25,
+    "variant_type": "Color",
+    "name": "Serene Slate Blue",
+    "sku": "SPS-SKU-0025-SER",
+    "price_adjustment": "50.00",
+    "stock_quantity": 17,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 146,
+  "fields": {
+    "product": 29,
+    "variant_type": "Color",
+    "name": "Ruby Crimson",
+    "sku": "SPS-SKU-0029-RUB",
+    "price_adjustment": "0.00",
+    "stock_quantity": 30,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 147,
+  "fields": {
+    "product": 29,
+    "variant_type": "Color",
+    "name": "Nude Mocha",
+    "sku": "SPS-SKU-0029-NUD",
+    "price_adjustment": "0.00",
+    "stock_quantity": 30,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 148,
+  "fields": {
+    "product": 35,
+    "variant_type": "Color",
+    "name": "Teal Aqua",
+    "sku": "SPS-SKU-0035-TEA",
+    "price_adjustment": "0.00",
+    "stock_quantity": 25,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 149,
+  "fields": {
+    "product": 35,
+    "variant_type": "Color",
+    "name": "Violet Plum",
+    "sku": "SPS-SKU-0035-VIO",
+    "price_adjustment": "0.00",
+    "stock_quantity": 25,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 150,
+  "fields": {
+    "product": 44,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-KW-001-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 151,
+  "fields": {
+    "product": 44,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-KW-001-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 152,
+  "fields": {
+    "product": 44,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-KW-001-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 153,
+  "fields": {
+    "product": 44,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-KW-001-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 154,
+  "fields": {
+    "product": 45,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-KW-002-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 155,
+  "fields": {
+    "product": 45,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-KW-002-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 156,
+  "fields": {
+    "product": 45,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-KW-002-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 157,
+  "fields": {
+    "product": 45,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-KW-002-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 158,
+  "fields": {
+    "product": 46,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-KW-003-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 159,
+  "fields": {
+    "product": 46,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-KW-003-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 160,
+  "fields": {
+    "product": 46,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-KW-003-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 161,
+  "fields": {
+    "product": 46,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-KW-003-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 162,
+  "fields": {
+    "product": 47,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-KW-004-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 163,
+  "fields": {
+    "product": 47,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-KW-004-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 164,
+  "fields": {
+    "product": 47,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-KW-004-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 165,
+  "fields": {
+    "product": 47,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-KW-004-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 166,
+  "fields": {
+    "product": 48,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-WW-001-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 167,
+  "fields": {
+    "product": 48,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-WW-001-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 168,
+  "fields": {
+    "product": 48,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-WW-001-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 169,
+  "fields": {
+    "product": 48,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-WW-001-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 170,
+  "fields": {
+    "product": 49,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-WW-002-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 171,
+  "fields": {
+    "product": 49,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-WW-002-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 172,
+  "fields": {
+    "product": 49,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-WW-002-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 173,
+  "fields": {
+    "product": 49,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-WW-002-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 174,
+  "fields": {
+    "product": 50,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-WW-003-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 175,
+  "fields": {
+    "product": 50,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-WW-003-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 176,
+  "fields": {
+    "product": 50,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-WW-003-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 177,
+  "fields": {
+    "product": 50,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-WW-003-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 178,
+  "fields": {
+    "product": 54,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-DRS-001-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 179,
+  "fields": {
+    "product": 54,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-DRS-001-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 180,
+  "fields": {
+    "product": 54,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-DRS-001-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 181,
+  "fields": {
+    "product": 54,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-DRS-001-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 182,
+  "fields": {
+    "product": 55,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-DRS-002-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 183,
+  "fields": {
+    "product": 55,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-DRS-002-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 184,
+  "fields": {
+    "product": 55,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-DRS-002-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 185,
+  "fields": {
+    "product": 55,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-DRS-002-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 186,
+  "fields": {
+    "product": 56,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-DRS-003-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 187,
+  "fields": {
+    "product": 56,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-DRS-003-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 188,
+  "fields": {
+    "product": 56,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-DRS-003-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 189,
+  "fields": {
+    "product": 56,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-DRS-003-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 190,
+  "fields": {
+    "product": 57,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-CW-001-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 191,
+  "fields": {
+    "product": 57,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-CW-001-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 192,
+  "fields": {
+    "product": 57,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-CW-001-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 193,
+  "fields": {
+    "product": 57,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-CW-001-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 194,
+  "fields": {
+    "product": 58,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-CW-002-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 195,
+  "fields": {
+    "product": 58,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-CW-002-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 196,
+  "fields": {
+    "product": 58,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-CW-002-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 197,
+  "fields": {
+    "product": 58,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-CW-002-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 198,
+  "fields": {
+    "product": 59,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-CW-003-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 199,
+  "fields": {
+    "product": 59,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-CW-003-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 200,
+  "fields": {
+    "product": 59,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-CW-003-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 201,
+  "fields": {
+    "product": 59,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-CW-003-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 202,
+  "fields": {
+    "product": 60,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-PW-001-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 203,
+  "fields": {
+    "product": 60,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-PW-001-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 204,
+  "fields": {
+    "product": 60,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-PW-001-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 205,
+  "fields": {
+    "product": 60,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-PW-001-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 206,
+  "fields": {
+    "product": 61,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-PW-002-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 207,
+  "fields": {
+    "product": 61,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-PW-002-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 208,
+  "fields": {
+    "product": 61,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-PW-002-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 209,
+  "fields": {
+    "product": 61,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-PW-002-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 210,
+  "fields": {
+    "product": 62,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-OW-001-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 211,
+  "fields": {
+    "product": 62,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-OW-001-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 212,
+  "fields": {
+    "product": 62,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-OW-001-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 213,
+  "fields": {
+    "product": 62,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-OW-001-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 214,
+  "fields": {
+    "product": 63,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-OW-002-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 215,
+  "fields": {
+    "product": 63,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-OW-002-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 216,
+  "fields": {
+    "product": 63,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-OW-002-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 217,
+  "fields": {
+    "product": 63,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-OW-002-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 218,
+  "fields": {
+    "product": 72,
+    "variant_type": "Size",
+    "name": "S",
+    "sku": "SPS-FW-001-S",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 219,
+  "fields": {
+    "product": 72,
+    "variant_type": "Size",
+    "name": "M",
+    "sku": "SPS-FW-001-M",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": true
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 220,
+  "fields": {
+    "product": 72,
+    "variant_type": "Size",
+    "name": "L",
+    "sku": "SPS-FW-001-L",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "products.productvariant",
+  "pk": 221,
+  "fields": {
+    "product": 72,
+    "variant_type": "Size",
+    "name": "XL",
+    "sku": "SPS-FW-001-XL",
+    "price_adjustment": "0.00",
+    "stock_quantity": 15,
+    "is_default": false
+  }
+},
+{
+  "model": "sellers.sellerprofile",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "business_name": "Nova Retail Hub",
+    "owner_name": "Vikram Mehta",
+    "email": "seller@shopsphere.local",
+    "phone": "+91 9811122334",
+    "business_address": "Plot 42, Electronic City, Bengaluru, Karnataka - 560100",
+    "gst_number": "29ABCDE1234F1Z5",
+    "pan_number": "ABCDE1234F",
+    "bank_name": "HDFC Bank",
+    "bank_account_number": "50100234567890",
+    "bank_ifsc": "HDFC0001234",
+    "store_logo": "",
+    "status": "APPROVED",
+    "rejection_reason": "",
+    "commission_rate": "5.00",
+    "created_at": "2026-09-29T05:09:32.918Z",
+    "updated_at": "2026-09-29T05:09:32.918Z"
+  }
+},
+{
+  "model": "sellers.sellerprofile",
+  "pk": 2,
+  "fields": {
+    "user": 4,
+    "business_name": "Urban Trends & Living",
+    "owner_name": "Pooja Verma",
+    "email": "crafts@shopsphere.local",
+    "phone": "+91 9833344556",
+    "business_address": "Sector 18, Cyber City, Gurugram, Haryana - 122002",
+    "gst_number": "06ABCDE5678G2Z1",
+    "pan_number": "FGHIJ5678K",
+    "bank_name": "",
+    "bank_account_number": "",
+    "bank_ifsc": "",
+    "store_logo": "",
+    "status": "APPROVED",
+    "rejection_reason": "",
+    "commission_rate": "5.00",
+    "created_at": "2026-09-29T05:09:33.904Z",
+    "updated_at": "2026-09-29T05:09:33.904Z"
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$LyWXviB0YBbB1ZLIgDpmw1$6ftuK4lRPfMSxjtflQAlYXrHOwVW6rS+xEghD3JxPpw=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "email": "admin@shopsphere.local",
+    "phone": "+91 9876543210",
+    "first_name": "ShopSphere",
+    "last_name": "Administrator",
+    "profile_image": "",
+    "role": "ADMIN",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-29T05:09:29.807Z",
+    "created_at": "2026-09-29T05:09:29.807Z",
+    "updated_at": "2026-09-30T04:34:47.621Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$1Ky7ajwLEVe1IiGCRowQqM$61gvs9Zva27kz48MnUgyN6dAzpt4rMrWoNDZqqJglmI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "novastore",
+    "email": "seller@shopsphere.local",
+    "phone": "+91 9811122334",
+    "first_name": "Vikram",
+    "last_name": "Mehta",
+    "profile_image": "",
+    "role": "SELLER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T05:09:30.862Z",
+    "created_at": "2026-09-29T05:09:30.862Z",
+    "updated_at": "2026-09-30T04:34:48.478Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$waxPpLii8yuMSZZiQzRG8U$SH0apx/holt1FjBIQnTz4ohOfpRrJnt5rTjM1DSqMgk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rahul_sharma",
+    "email": "customer@shopsphere.local",
+    "phone": "+91 9822233445",
+    "first_name": "Rahul",
+    "last_name": "Sharma",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T05:09:31.846Z",
+    "created_at": "2026-09-29T05:09:31.846Z",
+    "updated_at": "2026-09-30T04:34:49.301Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$As3aAgugPLt2mntAXiXFQa$KwnhKWemiZJLeSMpChGT0pQUK5yqk2Ml5+p3fWyw2Xw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "urbanstyle",
+    "email": "crafts@shopsphere.local",
+    "phone": "+91 9833344556",
+    "first_name": "Pooja",
+    "last_name": "Verma",
+    "profile_image": "",
+    "role": "SELLER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-29T05:09:32.927Z",
+    "created_at": "2026-09-29T05:09:32.928Z",
+    "updated_at": "2026-09-30T04:34:50.134Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$OT3hwyj8pWnLPv9fDAJLhE$k806MSDSzIlj91kYJEHN4EMruI8peuVxoPs3pQwn2kY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "lohitha",
+    "email": "lohitha@gmail.com",
+    "phone": "1234567895",
+    "first_name": "lohitha",
+    "last_name": "",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T04:40:10.173Z",
+    "created_at": "2026-09-30T04:40:11.014Z",
+    "updated_at": "2026-09-30T06:19:56.811Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$PQPmTOeG1CtYSqF2bbYKkW$Olai5SPcR0RMATMMBWLS9s4ca3pqcqORKDdEgOxvD0A=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "suite_user_1790747999",
+    "email": "suite_user_1790747999@shopsphere.test",
+    "phone": "",
+    "first_name": "Suite",
+    "last_name": "Verification User",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T05:59:59.072Z",
+    "created_at": "2026-09-30T06:00:00.054Z",
+    "updated_at": "2026-09-30T06:00:00.054Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$nY8BMGOusoPlACBB4yxhnD$sj+ec2Wvow5SumAhAnkoeeloBVjuDYgE0e1AYIg1k8g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "suite_user_1790748247",
+    "email": "suite_user_1790748247@shopsphere.test",
+    "phone": "",
+    "first_name": "Suite",
+    "last_name": "Verification User",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T06:04:07.172Z",
+    "created_at": "2026-09-30T06:04:08.001Z",
+    "updated_at": "2026-09-30T06:04:08.001Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$LqrxmD4YmCbfXnRovGaAWX$rFv0K/8UaAIwBQZ06Xf/zc6Ivy9awLXBJDy20NtR3wg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "suite_user_1790749375",
+    "email": "suite_user_1790749375@shopsphere.test",
+    "phone": "",
+    "first_name": "Suite",
+    "last_name": "Verification User",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T06:22:56.003Z",
+    "created_at": "2026-09-30T06:22:56.872Z",
+    "updated_at": "2026-09-30T06:22:56.872Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$C419REBT2AVjmbNQc1Gijh$vCAZdWYIGUJMFqKunGjkS8ILrXTcSYJD/kJswwHTsjk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "suite_user_1790749496",
+    "email": "suite_user_1790749496@shopsphere.test",
+    "phone": "",
+    "first_name": "Suite",
+    "last_name": "Verification User",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T06:24:56.515Z",
+    "created_at": "2026-09-30T06:24:57.355Z",
+    "updated_at": "2026-09-30T06:24:57.355Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$CCBPdLNxEFzZRv8QmoCmtu$tRfiSFPN5gqVa614OPMormmJpsrBSe+vNyrPm3ZORhU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "verified_user_1790749880",
+    "email": "verified_user_1790749880@shopsphere.test",
+    "phone": "",
+    "first_name": "ShopSphere",
+    "last_name": "Verified User",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T06:31:20.205Z",
+    "created_at": "2026-09-30T06:31:21.073Z",
+    "updated_at": "2026-09-30T06:31:21.073Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 12,
+  "fields": {
+    "password": "!i8rFNI3lb8JY381oQmw8WOsgb28Z4wMRexsb5ywy",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "google_new_1790749880",
+    "email": "google_new_1790749880@gmail.com",
+    "phone": "",
+    "first_name": "Google",
+    "last_name": "Newbie",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-30T06:31:24.513Z",
+    "created_at": "2026-09-30T06:31:24.513Z",
+    "updated_at": "2026-09-30T06:31:24.513Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$2ptHriMpD8yEYORw6InwXb$dnsTxK4GDGGOTyfNsIEfgwqj/mS2mW2KgFZjVCLd2oc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "inactive_1790749880",
+    "email": "inactive_1790749880@shopsphere.test",
+    "phone": "",
+    "first_name": "",
+    "last_name": "",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-09-30T06:31:24.544Z",
+    "created_at": "2026-09-30T06:31:25.580Z",
+    "updated_at": "2026-09-30T06:31:25.580Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$LW3fuRluMhRmJhEpSUk2Va$yzZaEtko/vqT29Iv3B9wm5jhdUNsnMHxW4oesqVUYX4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "verified_user_1790830018",
+    "email": "verified_user_1790830018@shopsphere.test",
+    "phone": "",
+    "first_name": "ShopSphere",
+    "last_name": "Verified User",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-01T04:46:58.220Z",
+    "created_at": "2026-10-01T04:46:59.021Z",
+    "updated_at": "2026-10-01T04:46:59.021Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 15,
+  "fields": {
+    "password": "!6gudrSXZDZ3feJB488jPqDD24IC2NAEesncNVDdQ",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "google_new_1790830018",
+    "email": "google_new_1790830018@gmail.com",
+    "phone": "",
+    "first_name": "Google",
+    "last_name": "Newbie",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-10-01T04:47:01.611Z",
+    "created_at": "2026-10-01T04:47:01.611Z",
+    "updated_at": "2026-10-01T04:47:01.611Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$JzSl6lSrJAoa4WGM94TDsQ$mliL+6zDmbTRCsz5BaYmpoysCwABjTMxrhdXa5ff2jc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "inactive_1790830018",
+    "email": "inactive_1790830018@shopsphere.test",
+    "phone": "",
+    "first_name": "",
+    "last_name": "",
+    "profile_image": "",
+    "role": "CUSTOMER",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-10-01T04:47:01.647Z",
+    "created_at": "2026-10-01T04:47:02.472Z",
+    "updated_at": "2026-10-01T04:47:02.472Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.useraddress",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "full_name": "Rahul Sharma",
+    "phone": "+91 9822233445",
+    "house_flat": "Flat 402, Sunshine Heights",
+    "street": "14th Cross, Indiranagar",
+    "area": "Near Metro Station",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560038",
+    "landmark": "Opposite Coffee House",
+    "address_type": "HOME",
+    "is_default": true,
+    "created_at": "2026-09-29T05:09:33.916Z",
+    "updated_at": "2026-09-29T05:09:33.916Z"
+  }
+},
+{
+  "model": "accounts.useraddress",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "full_name": "drgn",
+    "phone": "dfbg7oi8790",
+    "house_flat": "fbn",
+    "street": "dcvb",
+    "area": "fbg",
+    "city": "sfdbv",
+    "state": "dfgb",
+    "pincode": "63502",
+    "landmark": "",
+    "address_type": "HOME",
+    "is_default": true,
+    "created_at": "2026-09-29T05:29:17.150Z",
+    "updated_at": "2026-09-29T05:29:17.150Z"
+  }
+},
+{
+  "model": "accounts.useraddress",
+  "pk": 3,
+  "fields": {
+    "user": 5,
+    "full_name": "jscdhgf",
+    "phone": "iyughjk",
+    "house_flat": "hyfhbjk",
+    "street": "jhg",
+    "area": "ghuhgpuyg",
+    "city": "uighuyg",
+    "state": "uyguig",
+    "pincode": "848789",
+    "landmark": "",
+    "address_type": "HOME",
+    "is_default": true,
+    "created_at": "2026-09-30T07:06:52.385Z",
+    "updated_at": "2026-09-30T07:06:52.385Z"
+  }
+}
+]
