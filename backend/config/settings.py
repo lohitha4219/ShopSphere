@@ -1,8 +1,8 @@
-import os
 from pathlib import Path
 from datetime import timedelta
+import os
+
 from dotenv import load_dotenv
-import dj_database_url
 
 
 # ============================================================
@@ -18,40 +18,44 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / ".env")
 
+
+# ============================================================
+# SECURITY
+# ============================================================
+
 SECRET_KEY = os.getenv(
     "SECRET_KEY",
-    "shopsphere-super-secret-dev-key-change-in-production-2026"
+    "django-insecure-development-key-change-in-production",
 )
 
-DEBUG = os.getenv("DEBUG", "True").lower() in ("true", "1", "yes")
+DEBUG = os.getenv("DEBUG", "True").lower() in (
+    "true",
+    "1",
+    "yes",
+)
 
 
 # ============================================================
 # ALLOWED HOSTS
 # ============================================================
 
-allowed_hosts_env = os.getenv("ALLOWED_HOSTS")
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "testserver",
+    ".onrender.com",
+    ".railway.app",
+    ".up.railway.app",
+]
+
+# Add custom hosts from environment if provided
+allowed_hosts_env = os.getenv("ALLOWED_HOSTS", "")
 
 if allowed_hosts_env:
-    ALLOWED_HOSTS = [
-        host.strip()
-        for host in allowed_hosts_env.split(",")
-        if host.strip()
-    ]
-
-    if "testserver" not in ALLOWED_HOSTS:
-        ALLOWED_HOSTS.append("testserver")
-
-else:
-    ALLOWED_HOSTS = [
-        "localhost",
-        "127.0.0.1",
-        "testserver",
-        ".railway.app",
-        ".up.railway.app",
-        ".onrender.com",
-        "*",
-    ]
+    for host in allowed_hosts_env.split(","):
+        host = host.strip()
+        if host and host not in ALLOWED_HOSTS:
+            ALLOWED_HOSTS.append(host)
 
 
 # ============================================================
@@ -59,7 +63,6 @@ else:
 # ============================================================
 
 INSTALLED_APPS = [
-
     # Django
     "django.contrib.admin",
     "django.contrib.auth",
@@ -75,7 +78,7 @@ INSTALLED_APPS = [
     "django_filters",
     "drf_spectacular",
 
-    # ShopSphere
+    # ShopSphere apps
     "apps.accounts",
     "apps.categories",
     "apps.products",
@@ -95,7 +98,6 @@ INSTALLED_APPS = [
 # ============================================================
 
 MIDDLEWARE = [
-
     "corsheaders.middleware.CorsMiddleware",
 
     "django.middleware.security.SecurityMiddleware",
@@ -130,28 +132,18 @@ WSGI_APPLICATION = "config.wsgi.application"
 # ============================================================
 
 TEMPLATES = [
-
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-
         "DIRS": [
-            BASE_DIR / "templates"
+            BASE_DIR / "templates",
         ],
-
         "APP_DIRS": True,
-
         "OPTIONS": {
-
             "context_processors": [
-
                 "django.template.context_processors.debug",
-
                 "django.template.context_processors.request",
-
                 "django.contrib.auth.context_processors.auth",
-
                 "django.contrib.messages.context_processors.messages",
-
             ],
         },
     },
@@ -162,69 +154,57 @@ TEMPLATES = [
 # DATABASE
 # ============================================================
 #
-# Render
-#    ↓
-# Railway MySQL
+# Production:
+# Render → Railway MySQL
 #
 # Railway MySQL TCP Proxy:
-# Host = shuttle.proxy.rlwy.net
-# Port = 40267
+# Host: shuttle.proxy.rlwy.net
+# Port: 40267
+#
+# IMPORTANT:
+# This project intentionally uses DB_* variables.
+# DATABASE_URL is NOT required.
 #
 # ============================================================
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
 
+        "NAME": os.getenv(
+            "DB_NAME",
+            "railway",
+        ),
 
-if DATABASE_URL:
+        "USER": os.getenv(
+            "DB_USER",
+            "root",
+        ),
 
-    DATABASES = {
-        "default": dj_database_url.config(
-            default=DATABASE_URL,
-            conn_max_age=600,
-            conn_health_checks=True,
-        )
+        "PASSWORD": os.getenv(
+            "DB_PASSWORD",
+            "",
+        ),
+
+        "HOST": os.getenv(
+            "DB_HOST",
+            "",
+        ),
+
+        "PORT": os.getenv(
+            "DB_PORT",
+            "3306",
+        ),
+
+        "OPTIONS": {
+            "charset": "utf8mb4",
+        },
+
+        "CONN_MAX_AGE": 600,
+
+        "CONN_HEALTH_CHECKS": True,
     }
-
-else:
-
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.mysql",
-
-            "NAME": os.getenv(
-                "DB_NAME",
-                "railway"
-            ),
-
-            "USER": os.getenv(
-                "DB_USER",
-                "root"
-            ),
-
-            "PASSWORD": os.getenv(
-                "DB_PASSWORD",
-                ""
-            ),
-
-            "HOST": os.getenv(
-                "DB_HOST",
-                "localhost"
-            ),
-
-            "PORT": os.getenv(
-                "DB_PORT",
-                "3306"
-            ),
-
-            "OPTIONS": {
-                "charset": "utf8mb4",
-            },
-
-            "CONN_MAX_AGE": 600,
-
-            "CONN_HEALTH_CHECKS": True,
-        }
-    }
+}
 
 
 # ============================================================
@@ -239,15 +219,13 @@ AUTH_USER_MODEL = "accounts.User"
 # ============================================================
 
 AUTH_PASSWORD_VALIDATORS = [
-
     {
         "NAME": (
             "django.contrib.auth.password_validation."
             "MinimumLengthValidator"
         ),
-
         "OPTIONS": {
-            "min_length": 6
+            "min_length": 6,
         },
     },
 ]
@@ -300,28 +278,18 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ============================================================
 
 REST_FRAMEWORK = {
-
     "DEFAULT_AUTHENTICATION_CLASSES": (
-
-        "rest_framework_simplejwt.authentication."
-        "JWTAuthentication",
-
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 
     "DEFAULT_PERMISSION_CLASSES": [
-
         "rest_framework.permissions.AllowAny",
-
     ],
 
     "DEFAULT_FILTER_BACKENDS": [
-
         "django_filters.rest_framework.DjangoFilterBackend",
-
         "rest_framework.filters.SearchFilter",
-
         "rest_framework.filters.OrderingFilter",
-
     ],
 
     "DEFAULT_PAGINATION_CLASS": (
@@ -341,7 +309,6 @@ REST_FRAMEWORK = {
 # ============================================================
 
 SIMPLE_JWT = {
-
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
 
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
@@ -367,7 +334,7 @@ SIMPLE_JWT = {
 CORS_ALLOW_ALL_ORIGINS = (
     os.getenv(
         "CORS_ALLOW_ALL_ORIGINS",
-        "True"
+        "True",
     ).lower()
     in ("true", "1", "yes")
 )
@@ -377,32 +344,22 @@ CORS_ALLOW_CREDENTIALS = True
 
 cors_origins_env = os.getenv(
     "CORS_ALLOWED_ORIGINS",
-    ""
+    "",
 )
 
-
 if cors_origins_env:
-
     CORS_ALLOWED_ORIGINS = [
-
         origin.strip()
-
         for origin in cors_origins_env.split(",")
-
         if origin.strip()
-
     ]
-
 else:
-
     CORS_ALLOWED_ORIGINS = [
-
         "http://localhost:5173",
-
         "http://127.0.0.1:5173",
-
         "http://localhost:3000",
-
+        "https://*.onrender.com",
+        "https://*.vercel.app",
     ]
 
 
@@ -412,45 +369,29 @@ else:
 
 csrf_origins_env = os.getenv(
     "CSRF_TRUSTED_ORIGINS",
-    ""
+    "",
 )
 
-
 if csrf_origins_env:
-
     CSRF_TRUSTED_ORIGINS = [
-
         origin.strip()
-
         for origin in csrf_origins_env.split(",")
-
         if origin.strip()
-
     ]
-
 else:
-
     CSRF_TRUSTED_ORIGINS = [
-
         "http://localhost:5173",
-
         "http://127.0.0.1:5173",
-
         "http://localhost:3000",
-
-        "https://*.railway.app",
-
-        "https://*.up.railway.app",
-
         "https://*.onrender.com",
-
         "https://*.vercel.app",
-
+        "https://*.railway.app",
+        "https://*.up.railway.app",
     ]
 
 
 # ============================================================
-# HTTPS / REVERSE PROXY
+# HTTPS / RENDER REVERSE PROXY
 # ============================================================
 
 SECURE_PROXY_SSL_HEADER = (
@@ -464,7 +405,6 @@ SECURE_PROXY_SSL_HEADER = (
 # ============================================================
 
 SPECTACULAR_SETTINGS = {
-
     "TITLE": "ShopSphere E-Commerce API",
 
     "DESCRIPTION": (
@@ -484,12 +424,12 @@ SPECTACULAR_SETTINGS = {
 
 RAZORPAY_KEY_ID = os.getenv(
     "RAZORPAY_KEY_ID",
-    ""
+    "",
 )
 
 RAZORPAY_KEY_SECRET = os.getenv(
     "RAZORPAY_KEY_SECRET",
-    ""
+    "",
 )
 
 
@@ -499,10 +439,10 @@ RAZORPAY_KEY_SECRET = os.getenv(
 
 GOOGLE_CLIENT_ID = os.getenv(
     "GOOGLE_CLIENT_ID",
-    ""
+    "",
 )
 
 GOOGLE_CLIENT_SECRET = os.getenv(
     "GOOGLE_CLIENT_SECRET",
-    ""
+    "",
 )
