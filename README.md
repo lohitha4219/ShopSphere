@@ -1,10 +1,13 @@
-# ShopSphere — Next-Generation Modern E-Commerce Platform
+ShopSphere — Next-Generation Modern E-Commerce Platform
 
-> **"Everything You Need. Delivered Simply."**
+"Everything You Need. Delivered Simply."
 
-ShopSphere is a full-stack, production-grade e-commerce marketplace platform built with **React 19 + Vite** on the frontend and **Django 5 + Django REST Framework** on the backend. Designed with modular clean architecture, robust role-based access control (RBAC), and modern aesthetic user experience patterns inspired by consumer powerhouses such as Meesho and Flipkart.
+🌐 Live Demo: https://shop-sphere-six-bice.vercel.app/
 
----
+ShopSphere is a full-stack, production-grade e-commerce marketplace platform built with React 19 + Vite on the frontend and Django 5 + Django REST Framework on the backend. Designed with modular clean architecture, robust role-based access control (RBAC), and modern aesthetic user experience patterns inspired by consumer powerhouses such as Meesho and Flipkart.
+
+
+
 
 ## 🌟 Key Highlights
 
