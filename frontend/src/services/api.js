@@ -1,96 +1,178 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+// ============================================================
+// API BASE URL
+// ============================================================
+
+const rawApiUrl =
+  import.meta.env.VITE_API_URL ||
+  "https://shopsphere-56zo.onrender.com/api";
+
+const API_BASE_URL = rawApiUrl.replace(/\/+$/, "");
+
+// ============================================================
+// AXIOS INSTANCE
+// ============================================================
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
-// Request interceptor to attach JWT token
+// ============================================================
+// REQUEST INTERCEPTOR
+// Attach JWT access token to every request
+// ============================================================
+
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('shopsphere_access_token');
+    const token = localStorage.getItem("shopsphere_access_token");
+
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
+
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => {
+    return Promise.reject(error);
+  }
 );
 
-// Response interceptor for automatic token refresh on 401
+// ============================================================
+// TOKEN REFRESH
+// ============================================================
+
 let isRefreshing = false;
 let failedQueue = [];
 
 const processQueue = (error, token = null) => {
-  failedQueue.forEach((prom) => {
+  failedQueue.forEach((promise) => {
     if (error) {
-      prom.reject(error);
+      promise.reject(error);
     } else {
-      prom.resolve(token);
+      promise.resolve(token);
     }
   });
+
   failedQueue = [];
 };
 
+// ============================================================
+// RESPONSE INTERCEPTOR
+// Automatically refresh expired JWT tokens
+// ============================================================
+
 api.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    return response;
+  },
+
   async (error) => {
     const originalRequest = error.config;
 
-    // Check if error is 401 and request has not already retried
-    if (error.response?.status === 401 && !originalRequest._retry) {
-      if (originalRequest.url.includes('/auth/login') || originalRequest.url.includes('/auth/register')) {
+    // No response received
+    if (!error.response) {
+      return Promise.reject(error);
+    }
+
+    // Only handle 401 errors
+    if (
+      error.response.status === 401 &&
+      originalRequest &&
+      !originalRequest._retry
+    ) {
+      // Don't refresh tokens for login/register requests
+      if (
+        originalRequest.url?.includes("/auth/login") ||
+        originalRequest.url?.includes("/auth/register")
+      ) {
         return Promise.reject(error);
       }
 
+      // Another request is already refreshing the token
       if (isRefreshing) {
         return new Promise((resolve, reject) => {
-          failedQueue.push({ resolve, reject });
+          failedQueue.push({
+            resolve,
+            reject,
+          });
         })
           .then((token) => {
             originalRequest.headers.Authorization = `Bearer ${token}`;
             return api(originalRequest);
           })
-          .catch((err) => Promise.reject(err));
+          .catch((err) => {
+            return Promise.reject(err);
+          });
       }
 
       originalRequest._retry = true;
       isRefreshing = true;
 
-      const refreshToken = localStorage.getItem('shopsphere_refresh_token');
+      const refreshToken = localStorage.getItem(
+        "shopsphere_refresh_token"
+      );
+
+      // No refresh token available
       if (!refreshToken) {
         isRefreshing = false;
         return Promise.reject(error);
       }
 
       try {
-        const response = await axios.post(`${API_BASE_URL}/auth/refresh/`, {
-          refresh: refreshToken,
-        });
+        // Refresh access token
+        const response = await axios.post(
+          `${API_BASE_URL}/auth/refresh/`,
+          {
+            refresh: refreshToken,
+          }
+        );
 
         const newAccessToken = response.data.access;
-        localStorage.setItem('shopsphere_access_token', newAccessToken);
+
+        // Save new access token
+        localStorage.setItem(
+          "shopsphere_access_token",
+          newAccessToken
+        );
+
+        // Save rotated refresh token if returned
         if (response.data.refresh) {
-          localStorage.setItem('shopsphere_refresh_token', response.data.refresh);
+          localStorage.setItem(
+            "shopsphere_refresh_token",
+            response.data.refresh
+          );
         }
 
-        api.defaults.headers.common.Authorization = `Bearer ${newAccessToken}`;
-        originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
+        // Update default Authorization header
+        api.defaults.headers.common.Authorization =
+          `Bearer ${newAccessToken}`;
 
+        // Update original request
+        originalRequest.headers.Authorization =
+          `Bearer ${newAccessToken}`;
+
+        // Resolve queued requests
         processQueue(null, newAccessToken);
+
         isRefreshing = false;
 
+        // Retry original request
         return api(originalRequest);
       } catch (refreshError) {
+        // Reject queued requests
         processQueue(refreshError, null);
-        localStorage.removeItem('shopsphere_access_token');
-        localStorage.removeItem('shopsphere_refresh_token');
-        localStorage.removeItem('shopsphere_user');
+
+        // Clear authentication data
+        localStorage.removeItem("shopsphere_access_token");
+        localStorage.removeItem("shopsphere_refresh_token");
+        localStorage.removeItem("shopsphere_user");
+
         isRefreshing = false;
+
         return Promise.reject(refreshError);
       }
     }
@@ -98,5 +180,9 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+// ============================================================
+// EXPORT
+// ============================================================
 
 export default api;

@@ -93,7 +93,7 @@ export const AuthProvider = ({ children }) => {
     const rf = localStorage.getItem('shopsphere_refresh_token');
     if (!rf) return null;
     try {
-      const API_BASE = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api';
+      const API_BASE = (import.meta.env.VITE_API_URL || 'http://shopsphere-56zo.onrender.com/api').replace(/\/+$/, '');
       const response = await fetch(`${API_BASE}/auth/refresh/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

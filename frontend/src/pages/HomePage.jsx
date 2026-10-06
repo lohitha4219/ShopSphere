@@ -46,7 +46,7 @@ export const HomePage = () => {
     // 2. Products
     const [cats, prodsRes] = await Promise.all([
       categoryService.getCategories(),
-      productService.getProducts({ page_size: 40 }),
+     productService.getProducts({ page_size: 100 }),
     ]);
 
     const parseList = (res) =>

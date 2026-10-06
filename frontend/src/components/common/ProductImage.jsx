@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { getImageUrl, PLACEHOLDER_PRODUCT, PLACEHOLDER_CATEGORY } from '../../utils/image';
+import React, { useEffect, useState } from 'react';
+
+import {
+  getImageUrl,
+  PLACEHOLDER_PRODUCT,
+  PLACEHOLDER_CATEGORY,
+} from '../../utils/image';
 
 export const ProductImage = ({
   src,
@@ -11,19 +16,49 @@ export const ProductImage = ({
   loading = 'lazy',
   ...props
 }) => {
-  const [resolvedSrc, setResolvedSrc] = useState(() => getImageUrl(src, fallbackType));
+  const getResolvedImage = (value) => {
+    const url = getImageUrl(value, fallbackType);
+
+    // Debug only - remove later if desired
+    console.log('ShopSphere image:', {
+      original: value,
+      resolved: url,
+    });
+
+    return url;
+  };
+
+  const [resolvedSrc, setResolvedSrc] = useState(() =>
+    getResolvedImage(src)
+  );
+
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    setResolvedSrc(getImageUrl(src, fallbackType));
+    const newUrl = getResolvedImage(src);
+
+    setResolvedSrc(newUrl);
     setHasError(false);
   }, [src, fallbackType]);
 
-  const handleError = () => {
-    if (!hasError) {
-      setHasError(true);
-      setResolvedSrc(fallbackType === 'category' ? PLACEHOLDER_CATEGORY : PLACEHOLDER_PRODUCT);
+  const handleError = (event) => {
+    if (hasError) {
+      return;
     }
+
+    console.error('ShopSphere image failed:', {
+      src,
+      resolvedSrc,
+      error: event?.nativeEvent || event,
+    });
+
+    setHasError(true);
+
+    setResolvedSrc(
+      fallbackType === 'category'
+        ? PLACEHOLDER_CATEGORY
+        : PLACEHOLDER_PRODUCT
+    );
   };
 
   return (
@@ -34,7 +69,10 @@ export const ProductImage = ({
       onError={handleError}
       className={className}
       style={{
+        width: '100%',
+        height: '100%',
         objectFit,
+        display: 'block',
         ...style,
       }}
       {...props}
