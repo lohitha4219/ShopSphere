@@ -3,6 +3,8 @@ from pathlib import Path
 from datetime import timedelta
 from dotenv import load_dotenv
 
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,7 +14,13 @@ load_dotenv(BASE_DIR / '.env')
 SECRET_KEY = os.getenv('SECRET_KEY', 'shopsphere-super-secret-dev-key-change-in-production-2026')
 DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
 
-ALLOWED_HOSTS = [h.strip() for h in os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,testserver,*').split(',') if h.strip()]
+allowed_hosts_env = os.getenv('ALLOWED_HOSTS')
+if allowed_hosts_env:
+    ALLOWED_HOSTS = [h.strip() for h in allowed_hosts_env.split(',') if h.strip()]
+    if 'testserver' not in ALLOWED_HOSTS:
+        ALLOWED_HOSTS.append('testserver')
+else:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver', '.railway.app', '.up.railway.app', '*']
 
 # Application definition
 INSTALLED_APPS = [
@@ -47,6 +55,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -76,18 +85,35 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 # Database
-# Default: SQLite3 for local development; PostgreSQL configurable via DATABASE_URL
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "shopsphere_db",
-        "USER": "root",
-        "PASSWORD": "lohitha",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
+# Production: Railway PostgreSQL via DATABASE_URL
+# Development: SQLite3 fallback
+DATABASE_URL = os.getenv('DATABASE_URL')
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=DATABASE_URL,
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
     }
-}
-
+elif os.getenv('DB_ENGINE') == 'mysql' and os.getenv('DB_NAME'):
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": os.getenv("DB_NAME"),
+            "USER": os.getenv("DB_USER"),
+            "PASSWORD": os.getenv("DB_PASSWORD"),
+            "HOST": os.getenv("DB_HOST"),
+            "PORT": os.getenv("DB_PORT", "3306"),
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 # Custom User Model
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -108,6 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # Media files (uploads)
 MEDIA_URL = '/media/'
@@ -145,7 +172,7 @@ SIMPLE_JWT = {
 }
 
 # CORS Configuration
-CORS_ALLOW_ALL_ORIGINS = True  # Safe for local dev
+CORS_ALLOW_ALL_ORIGINS = os.getenv('CORS_ALLOW_ALL_ORIGINS', 'True').lower() in ('true', '1', 'yes')
 CORS_ALLOW_CREDENTIALS = True
 cors_origins_env = os.getenv('CORS_ALLOWED_ORIGINS', '')
 if cors_origins_env:
@@ -154,7 +181,24 @@ else:
     CORS_ALLOWED_ORIGINS = [
         'http://localhost:5173',
         'http://127.0.0.1:5173',
+        'http://localhost:3000',
     ]
+
+# CSRF Configuration for Railway & Vercel
+csrf_origins_env = os.getenv('CSRF_TRUSTED_ORIGINS', '')
+if csrf_origins_env:
+    CSRF_TRUSTED_ORIGINS = [o.strip() for o in csrf_origins_env.split(',') if o.strip()]
+else:
+    CSRF_TRUSTED_ORIGINS = [
+        'http://localhost:5173',
+        'http://127.0.0.1:5173',
+        'http://localhost:3000',
+        'https://*.railway.app',
+        'https://*.up.railway.app',
+        'https://*.vercel.app',
+    ]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # drf-spectacular settings
 SPECTACULAR_SETTINGS = {

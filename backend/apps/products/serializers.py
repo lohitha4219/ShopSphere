@@ -1,12 +1,39 @@
+import re
 from rest_framework import serializers
 from .models import Product, ProductImage, ProductVariant
 from apps.categories.serializers import CategorySerializer
 from apps.sellers.serializers import SellerProfileSerializer
 
+def resolve_image_url(image_field, request=None):
+    if not image_field:
+        return ''
+    val = str(image_field).strip()
+    if not val:
+        return ''
+    if val.startswith('http://') or val.startswith('https://'):
+        return val
+    try:
+        url = image_field.url
+        if '/http:/' in url or '/https:/' in url or '/http%3A/' in url or '/https%3A/' in url:
+            m = re.search(r'https?://[^\s]+', val)
+            if m:
+                return m.group(0)
+    except Exception:
+        url = f"/media/{val.lstrip('/')}"
+        
+    if request is not None and not url.startswith('http'):
+        return request.build_absolute_uri(url)
+    return url
+
 class ProductImageSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
+
     class Meta:
         model = ProductImage
         fields = ['id', 'image', 'alt_text', 'is_primary', 'order']
+
+    def get_image(self, obj):
+        return resolve_image_url(obj.image, self.context.get('request'))
 
 class ProductVariantSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,6 +48,7 @@ class ProductListSerializer(serializers.ModelSerializer):
     subcategory_slug = serializers.CharField(source='subcategory.slug', read_only=True, default='')
     final_price = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
     in_stock = serializers.BooleanField(read_only=True)
+    thumbnail = serializers.SerializerMethodField()
     primary_image = serializers.SerializerMethodField()
 
     class Meta:
@@ -34,12 +62,16 @@ class ProductListSerializer(serializers.ModelSerializer):
             'is_best_seller', 'in_stock', 'created_at'
         ]
 
+    def get_thumbnail(self, obj):
+        return resolve_image_url(obj.thumbnail, self.context.get('request'))
+
     def get_primary_image(self, obj):
+        req = self.context.get('request')
         if obj.thumbnail:
-            return obj.thumbnail.url if hasattr(obj.thumbnail, 'url') else str(obj.thumbnail)
+            return resolve_image_url(obj.thumbnail, req)
         first_img = obj.images.filter(is_primary=True).first() or obj.images.first()
         if first_img and first_img.image:
-            return first_img.image.url if hasattr(first_img.image, 'url') else str(first_img.image)
+            return resolve_image_url(first_img.image, req)
         return ''
 
 class ProductDetailSerializer(serializers.ModelSerializer):
@@ -49,6 +81,7 @@ class ProductDetailSerializer(serializers.ModelSerializer):
     variants = ProductVariantSerializer(many=True, read_only=True)
     final_price = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
     in_stock = serializers.BooleanField(read_only=True)
+    thumbnail = serializers.SerializerMethodField()
 
     class Meta:
         model = Product
@@ -61,6 +94,9 @@ class ProductDetailSerializer(serializers.ModelSerializer):
             'is_active', 'is_featured', 'is_best_seller', 'in_stock',
             'created_at', 'updated_at'
         ]
+
+    def get_thumbnail(self, obj):
+        return resolve_image_url(obj.thumbnail, self.context.get('request'))
 
 class ProductCreateUpdateSerializer(serializers.ModelSerializer):
     class Meta:

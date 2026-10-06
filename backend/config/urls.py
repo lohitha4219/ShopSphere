@@ -1,7 +1,8 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.static import serve
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.routers import DefaultRouter
 
@@ -35,8 +36,10 @@ urlpatterns = [
     path('api/admin/dashboard/', AdminDashboardStatsView.as_view(), name='admin-dashboard-stats'),
     path('api/admin/reports/', AdminReportsView.as_view(), name='admin-reports'),
     path('api/admin/', include(admin_router.urls)),
+
+    # Serve media files in all environments
+    re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
